@@ -319,6 +319,11 @@ namespace BasicFacebookFeatures
             listBoxPostComments.DisplayMember = "Message";
             listBoxPostComments.DataSource = selected.Comments;
         }
-    }
+
+          private void FormMain_Load(object sender, EventArgs e)
+          {
+
+          }
+     }
 
 }
