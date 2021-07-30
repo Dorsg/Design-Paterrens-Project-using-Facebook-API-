@@ -48,10 +48,6 @@ namespace BasicFacebookFeatures
                this.Text = string.Empty;
                this.ControlBox = false;
 
-               //if (m_LoggedInUser.Posts.Count > 0)
-               //{
-               //     textBoxStatus.Text = m_LoggedInUser.Posts[0].Message;
-               //}
           }
 
 
@@ -113,7 +109,7 @@ namespace BasicFacebookFeatures
 
           private void m_ButtonAlbums_Click(object sender, EventArgs e)
           {
-               OpenChildForm(new Forms.AlbumsForm(), sender);
+               OpenChildForm(new Forms.AlbumsForm(m_LoggedInUser), sender);
           }
 
           private void m_buttonGroups_Click(object sender, EventArgs e)

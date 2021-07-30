@@ -30,9 +30,10 @@
         {
                System.Windows.Forms.Button buttonLogin;
                System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-               this.buttonLogout = new System.Windows.Forms.Button();
+               System.Windows.Forms.Button m_ButtonLoginSetting;
                this.pictureBox1 = new System.Windows.Forms.PictureBox();
                buttonLogin = new System.Windows.Forms.Button();
+               m_ButtonLoginSetting = new System.Windows.Forms.Button();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
                this.SuspendLayout();
                // 
@@ -46,16 +47,6 @@
                buttonLogin.UseVisualStyleBackColor = true;
                buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
                // 
-               // buttonLogout
-               // 
-               this.buttonLogout.Location = new System.Drawing.Point(169, 203);
-               this.buttonLogout.Name = "buttonLogout";
-               this.buttonLogout.Size = new System.Drawing.Size(179, 32);
-               this.buttonLogout.TabIndex = 52;
-               this.buttonLogout.Text = "Logout";
-               this.buttonLogout.UseVisualStyleBackColor = true;
-               this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
-               // 
                // pictureBox1
                // 
                this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -67,14 +58,24 @@
                this.pictureBox1.TabIndex = 53;
                this.pictureBox1.TabStop = false;
                // 
+               // m_ButtonLoginSetting
+               // 
+               m_ButtonLoginSetting.Location = new System.Drawing.Point(169, 212);
+               m_ButtonLoginSetting.Name = "m_ButtonLoginSetting";
+               m_ButtonLoginSetting.Size = new System.Drawing.Size(179, 33);
+               m_ButtonLoginSetting.TabIndex = 54;
+               m_ButtonLoginSetting.Text = "Login Settings";
+               m_ButtonLoginSetting.UseVisualStyleBackColor = true;
+               m_ButtonLoginSetting.Click += new System.EventHandler(this.m_ButtonLoginSetting_Click);
+               // 
                // FormMain
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
                this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
                this.ClientSize = new System.Drawing.Size(523, 339);
+               this.Controls.Add(m_ButtonLoginSetting);
                this.Controls.Add(this.pictureBox1);
-               this.Controls.Add(this.buttonLogout);
                this.Controls.Add(buttonLogin);
                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
                this.Name = "FormMain";
@@ -87,7 +88,6 @@
         }
 
 		#endregion
-		private System.Windows.Forms.Button buttonLogout;
           private System.Windows.Forms.PictureBox pictureBox1;
      }
 }

@@ -95,6 +95,12 @@
     <Compile Include="FcbForm.Designer.cs">
       <DependentUpon>FcbForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAppSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAppSettings.designer.cs">
+      <DependentUpon>FormAppSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FcbForm.resx">
       <DependentUpon>FcbForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAppSettings.resx">
+      <DependentUpon>FormAppSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

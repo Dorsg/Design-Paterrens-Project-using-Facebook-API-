@@ -68,20 +68,39 @@ namespace BasicFacebookFeatures
                
           }
 
-          private void buttonLogout_Click(object sender, EventArgs e)
-          {
-               FacebookService.LogoutWithUI();
-               //buttonLogin.Text = "Login";
-          }
-          
-          private void pictureBox2_Click(object sender, EventArgs e)
-          {
-
-          }
-
           private void FormMain_Load(object sender, EventArgs e)
           {
 
           }
+          FormAppSettings m_FormAppSettings = null;
+          private void m_ButtonLoginSetting_Click(object sender, EventArgs e)
+          {
+               if (m_FormAppSettings == null)
+               {
+                    m_FormAppSettings = new FormAppSettings();
+               }
+               m_FormAppSettings.ShowDialog();
+          }
+
+
      }
+     public static class AppSettings
+          {
+               public static string s_AppID = "1450160541956417"; /// (desig patter's "Design Patterns Course App 2.4" app)
+               public static string[] s_Permissions = new string[] {
+                    "email",
+                    "public_profile",
+                    "user_age_range",
+                    "user_birthday",
+                    "user_events",
+                    "user_friends",
+                    "user_gender",
+                    "user_hometown",
+                    "user_likes",
+                    "user_link",
+                    "user_location",
+                    "user_photos",
+                    "user_posts",
+                    "user_videos"};
+          }
 }
