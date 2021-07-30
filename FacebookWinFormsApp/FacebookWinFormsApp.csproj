@@ -133,6 +133,70 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3330248.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33302481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33302482.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2488797.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png1.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png - Copy.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\809486_albums_media_multimedia_photo album_photos_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\809486_albums_media_multimedia_photo album_photos_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\809486_albums_media_multimedia_photo album_photos_icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\809486_albums_media_multimedia_photo album_photos_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6590519_communication_email_letter_post_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\309041_users_group_people_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\216308_pages_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3209289_copy_files_pages_papers_print_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3209289_copy_files_pages_papers_print_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\751098_events_date_event_party_schedule_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2180486_calendar_events_fb_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2239660_calendar_date_events_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2561383_settings_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4115235_exit_logout_sign out_icon.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
