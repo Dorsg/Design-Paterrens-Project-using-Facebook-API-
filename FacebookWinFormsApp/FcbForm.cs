@@ -108,47 +108,48 @@ namespace BasicFacebookFeatures
 
           private void m_ButtonStatus_Click(object sender, EventArgs e)
           {
-               ///OpenChildForm(new Form1(), sender);
+               OpenChildForm(new Forms.StatusForm(m_LoggedInUser), sender);
           }
 
           private void m_ButtonAlbums_Click(object sender, EventArgs e)
           {
-               ActivateButton(sender);
+               OpenChildForm(new Forms.AlbumsForm(), sender);
           }
 
           private void m_buttonGroups_Click(object sender, EventArgs e)
           {
-               ActivateButton(sender);
+               OpenChildForm(new Forms.GroupsForm(), sender);
           }
 
           private void m_ButtonPages_Click(object sender, EventArgs e)
           {
-               ActivateButton(sender);
+               OpenChildForm(new Forms.PagesForm(), sender);
           }
 
           private void m_ButtonEvents_Click(object sender, EventArgs e)
           {
-               ActivateButton(sender);
+               OpenChildForm(new Forms.EventsForm(), sender);
           }
 
           private void m_ButtonMyFeature1_Click(object sender, EventArgs e)
           {
-               ActivateButton(sender);
+               //OpenChildForm(new Forms.StatusForm(), sender);
           }
 
           private void m_buttonMyFeature2_Click(object sender, EventArgs e)
           {
-               ActivateButton(sender);
+               //OpenChildForm(new Forms.StatusForm(), sender);
           }
 
           private void m_ButtonSettins_Click(object sender, EventArgs e)
           {
-               ActivateButton(sender);
+               OpenChildForm(new Forms.SettingsForm(), sender);
           }
 
           private void m_ButtonLogout_Click(object sender, EventArgs e)
           {
-               ActivateButton(sender);
+               FacebookService.LogoutWithUI();
+               this.Close();
           }
 
           private void m_TtilePanel_MouseDown(object sender, MouseEventArgs e)
@@ -162,5 +163,7 @@ namespace BasicFacebookFeatures
                ReleaseCapture();
                SendMessage(this.Handle, 0x112, 0xf012, 0);
           }
+
+
      }
 }

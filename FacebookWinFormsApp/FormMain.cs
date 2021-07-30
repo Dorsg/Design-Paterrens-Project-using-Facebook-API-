@@ -58,6 +58,7 @@ namespace BasicFacebookFeatures
                  
                     m_MainForm.ShowDialog();
 
+                    m_LoginResult = null;
                }
                else
                {
