@@ -33,7 +33,6 @@ namespace BasicFacebookFeatures
                this.m_LabelBirthday = new System.Windows.Forms.Label();
                this.m_PanelMenu = new System.Windows.Forms.Panel();
                this.m_ButtonLogout = new System.Windows.Forms.Button();
-               this.m_ButtonSettins = new System.Windows.Forms.Button();
                this.m_buttonMyFeature2 = new System.Windows.Forms.Button();
                this.m_ButtonMyFeature1 = new System.Windows.Forms.Button();
                this.m_ButtonEvents = new System.Windows.Forms.Button();
@@ -78,7 +77,6 @@ namespace BasicFacebookFeatures
                // 
                this.m_PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
                this.m_PanelMenu.Controls.Add(this.m_ButtonLogout);
-               this.m_PanelMenu.Controls.Add(this.m_ButtonSettins);
                this.m_PanelMenu.Controls.Add(this.m_buttonMyFeature2);
                this.m_PanelMenu.Controls.Add(this.m_ButtonMyFeature1);
                this.m_PanelMenu.Controls.Add(this.m_ButtonEvents);
@@ -90,7 +88,7 @@ namespace BasicFacebookFeatures
                this.m_PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
                this.m_PanelMenu.Location = new System.Drawing.Point(0, 0);
                this.m_PanelMenu.Name = "m_PanelMenu";
-               this.m_PanelMenu.Size = new System.Drawing.Size(269, 459);
+               this.m_PanelMenu.Size = new System.Drawing.Size(269, 418);
                this.m_PanelMenu.TabIndex = 11;
                // 
                // m_ButtonLogout
@@ -102,7 +100,7 @@ namespace BasicFacebookFeatures
                this.m_ButtonLogout.ForeColor = System.Drawing.Color.Gainsboro;
                this.m_ButtonLogout.Image = global::BasicFacebookFeatures.Properties.Resources._4115235_exit_logout_sign_out_icon;
                this.m_ButtonLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-               this.m_ButtonLogout.Location = new System.Drawing.Point(0, 412);
+               this.m_ButtonLogout.Location = new System.Drawing.Point(0, 370);
                this.m_ButtonLogout.Name = "m_ButtonLogout";
                this.m_ButtonLogout.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
                this.m_ButtonLogout.Size = new System.Drawing.Size(269, 42);
@@ -112,26 +110,6 @@ namespace BasicFacebookFeatures
                this.m_ButtonLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
                this.m_ButtonLogout.UseVisualStyleBackColor = true;
                this.m_ButtonLogout.Click += new System.EventHandler(this.m_ButtonLogout_Click);
-               // 
-               // m_ButtonSettins
-               // 
-               this.m_ButtonSettins.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-               this.m_ButtonSettins.Dock = System.Windows.Forms.DockStyle.Top;
-               this.m_ButtonSettins.FlatAppearance.BorderSize = 0;
-               this.m_ButtonSettins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.m_ButtonSettins.ForeColor = System.Drawing.Color.Gainsboro;
-               this.m_ButtonSettins.Image = global::BasicFacebookFeatures.Properties.Resources._2561383_settings_icon;
-               this.m_ButtonSettins.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-               this.m_ButtonSettins.Location = new System.Drawing.Point(0, 370);
-               this.m_ButtonSettins.Name = "m_ButtonSettins";
-               this.m_ButtonSettins.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-               this.m_ButtonSettins.Size = new System.Drawing.Size(269, 42);
-               this.m_ButtonSettins.TabIndex = 8;
-               this.m_ButtonSettins.Text = "   Settings";
-               this.m_ButtonSettins.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-               this.m_ButtonSettins.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-               this.m_ButtonSettins.UseVisualStyleBackColor = true;
-               this.m_ButtonSettins.Click += new System.EventHandler(this.m_ButtonSettins_Click);
                // 
                // m_buttonMyFeature2
                // 
@@ -336,10 +314,11 @@ namespace BasicFacebookFeatures
                // 
                // m_PanelDesktop
                // 
+               this.m_PanelDesktop.BackColor = System.Drawing.Color.White;
                this.m_PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
                this.m_PanelDesktop.Location = new System.Drawing.Point(269, 76);
                this.m_PanelDesktop.Name = "m_PanelDesktop";
-               this.m_PanelDesktop.Size = new System.Drawing.Size(680, 383);
+               this.m_PanelDesktop.Size = new System.Drawing.Size(680, 342);
                this.m_PanelDesktop.TabIndex = 13;
                this.m_PanelDesktop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.m_PanelDesktop_MouseDown);
                // 
@@ -347,7 +326,8 @@ namespace BasicFacebookFeatures
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-               this.ClientSize = new System.Drawing.Size(949, 459);
+               this.BackColor = System.Drawing.Color.Black;
+               this.ClientSize = new System.Drawing.Size(949, 418);
                this.Controls.Add(this.m_PanelDesktop);
                this.Controls.Add(this.m_TtilePanel);
                this.Controls.Add(this.m_PanelMenu);
@@ -377,7 +357,6 @@ namespace BasicFacebookFeatures
           private System.Windows.Forms.Label m_LabelName;
           private System.Windows.Forms.Label m_LabelGender;
           private System.Windows.Forms.Button m_ButtonLogout;
-          private System.Windows.Forms.Button m_ButtonSettins;
           private System.Windows.Forms.Button m_buttonMyFeature2;
           private System.Windows.Forms.Button m_ButtonMyFeature1;
           private System.Windows.Forms.Button m_ButtonEvents;

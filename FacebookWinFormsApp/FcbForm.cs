@@ -46,7 +46,6 @@ namespace BasicFacebookFeatures
                m_LabelGender.Text = "Gender: " + m_LoggedInUser.Gender;
                m_LabelEmail.Text = "Email: " + m_LoggedInUser.Email;
                this.Text = string.Empty;
-               this.ControlBox = false;
 
           }
 
@@ -114,7 +113,7 @@ namespace BasicFacebookFeatures
 
           private void m_buttonGroups_Click(object sender, EventArgs e)
           {
-               OpenChildForm(new Forms.GroupsForm(), sender);
+               OpenChildForm(new Forms.GroupsForm(m_LoggedInUser), sender);
           }
 
           private void m_ButtonPages_Click(object sender, EventArgs e)
@@ -137,10 +136,6 @@ namespace BasicFacebookFeatures
                //OpenChildForm(new Forms.StatusForm(), sender);
           }
 
-          private void m_ButtonSettins_Click(object sender, EventArgs e)
-          {
-               OpenChildForm(new Forms.SettingsForm(), sender);
-          }
 
           private void m_ButtonLogout_Click(object sender, EventArgs e)
           {
