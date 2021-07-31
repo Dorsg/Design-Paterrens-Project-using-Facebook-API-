@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using FacebookWrapper.ObjectModel;
 using FacebookWrapper;
@@ -13,16 +7,16 @@ namespace BasicFacebookFeatures
 {
      public partial class FormMain : Form
      {
-          User m_LoggedInUser;
-          LoginResult m_LoginResult;
-          FcbForm m_MainForm;
+          private User m_LoggedInUser;
+          private LoginResult m_LoginResult;
+          private FcbForm m_MainForm;
+          private FormAppSettings m_FormAppSettings;
 
           public FormMain()
           {
                InitializeComponent();
                FacebookWrapper.FacebookService.s_CollectionLimit = 100;
           }
-
           private void buttonLogin_Click(object sender, EventArgs e)
           {
                Clipboard.SetText("design.patterns20cc"); /// the current password for Desig Patter
@@ -53,9 +47,9 @@ namespace BasicFacebookFeatures
                     //buttonLogin.Hide();
                     //fetchUserInfo();
                     //loadName();
-                    
+
                     m_MainForm = new FcbForm(m_LoggedInUser);
-                 
+
                     m_MainForm.ShowDialog();
 
                     m_LoginResult = null;
@@ -65,14 +59,12 @@ namespace BasicFacebookFeatures
                     MessageBox.Show(m_LoginResult.ErrorMessage, "Login Failed");
                }
 
-               
-          }
 
+          }
           private void FormMain_Load(object sender, EventArgs e)
           {
 
           }
-          FormAppSettings m_FormAppSettings = null;
           private void m_ButtonLoginSetting_Click(object sender, EventArgs e)
           {
                if (m_FormAppSettings == null)
@@ -85,22 +77,24 @@ namespace BasicFacebookFeatures
 
      }
      public static class AppSettings
-          {
-               public static string s_AppID = "1450160541956417"; /// (desig patter's "Design Patterns Course App 2.4" app)
-               public static string[] s_Permissions = new string[] {
-                    "email",
-                    "public_profile",
-                    "user_age_range",
-                    "user_birthday",
-                    "user_events",
-                    "user_friends",
-                    "user_gender",
-                    "user_hometown",
-                    "user_likes",
-                    "user_link",
-                    "user_location",
-                    "user_photos",
-                    "user_posts",
-                    "user_videos"};
-          }
+     {
+          public static string s_AppID = "1450160541956417"; /// (desig patter's "Design Patterns Course App 2.4" app)
+          public static string[] s_Permissions =  {
+                                                            "email",
+                                                            "public_profile",
+                                                            "user_age_range",
+                                                            "user_birthday",
+                                                            "user_events",
+                                                            "user_friends",
+                                                            "user_gender",
+                                                            "user_hometown",
+                                                            "user_likes",
+                                                            "user_link",
+                                                            "user_location",
+                                                            "user_photos",
+                                                            "user_posts",
+                                                            "user_videos"
+
+                                                       };
+     }
 }

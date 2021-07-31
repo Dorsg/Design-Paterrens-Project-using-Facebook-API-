@@ -113,6 +113,12 @@
     <Compile Include="Forms\AlbumsForm.Designer.cs">
       <DependentUpon>AlbumsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DatingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DatingForm.Designer.cs">
+      <DependentUpon>DatingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EventsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AlbumsForm.resx">
       <DependentUpon>AlbumsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DatingForm.resx">
+      <DependentUpon>DatingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EventsForm.resx">
       <DependentUpon>EventsForm.cs</DependentUpon>
@@ -250,7 +259,12 @@
   <ItemGroup>
     <None Include="Resources\4115235_exit_logout_sign out_icon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\2205225_favorite_like_love_popular_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2324137_balloons_events_organizing_party_planning_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

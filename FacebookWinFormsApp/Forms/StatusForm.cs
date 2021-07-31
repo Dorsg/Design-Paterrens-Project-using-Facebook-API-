@@ -1,19 +1,12 @@
 ﻿using FacebookWrapper.ObjectModel;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BasicFacebookFeatures.Forms
 {
      public partial class StatusForm : Form
      {
-          User m_LoggedInUser;
+          private readonly User m_LoggedInUser;
           public StatusForm(User i_LoggedInUser)
           {
                m_LoggedInUser = i_LoggedInUser;

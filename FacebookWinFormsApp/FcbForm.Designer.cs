@@ -29,28 +29,29 @@ namespace BasicFacebookFeatures
           /// </summary>
           private void InitializeComponent()
           {
+               System.Windows.Forms.Button m_ButtonEvents;
                this.m_LabelEmail = new System.Windows.Forms.Label();
                this.m_LabelBirthday = new System.Windows.Forms.Label();
                this.m_PanelMenu = new System.Windows.Forms.Panel();
-               this.m_ButtonLogout = new System.Windows.Forms.Button();
                this.m_buttonMyFeature2 = new System.Windows.Forms.Button();
-               this.m_ButtonMyFeature1 = new System.Windows.Forms.Button();
-               this.m_ButtonEvents = new System.Windows.Forms.Button();
-               this.m_ButtonPages = new System.Windows.Forms.Button();
-               this.m_buttonGroups = new System.Windows.Forms.Button();
-               this.m_ButtonAlbums = new System.Windows.Forms.Button();
-               this.m_ButtonStatus = new System.Windows.Forms.Button();
                this.m_PanelUpperMenu = new System.Windows.Forms.Panel();
-               this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
                this.m_LabelName = new System.Windows.Forms.Label();
                this.m_LabelGender = new System.Windows.Forms.Label();
                this.m_TtilePanel = new System.Windows.Forms.Panel();
                this.m_LabelTitle = new System.Windows.Forms.Label();
                this.m_PanelDesktop = new System.Windows.Forms.Panel();
+               this.m_ButtonLogout = new System.Windows.Forms.Button();
+               this.m_ButtonMyFeature1 = new System.Windows.Forms.Button();
+               this.m_ButtonPages = new System.Windows.Forms.Button();
+               this.m_buttonGroups = new System.Windows.Forms.Button();
+               this.m_ButtonAlbums = new System.Windows.Forms.Button();
+               this.m_ButtonStatus = new System.Windows.Forms.Button();
+               this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
+               m_ButtonEvents = new System.Windows.Forms.Button();
                this.m_PanelMenu.SuspendLayout();
                this.m_PanelUpperMenu.SuspendLayout();
-               ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
                this.m_TtilePanel.SuspendLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
                this.SuspendLayout();
                // 
                // m_LabelEmail
@@ -79,7 +80,7 @@ namespace BasicFacebookFeatures
                this.m_PanelMenu.Controls.Add(this.m_ButtonLogout);
                this.m_PanelMenu.Controls.Add(this.m_buttonMyFeature2);
                this.m_PanelMenu.Controls.Add(this.m_ButtonMyFeature1);
-               this.m_PanelMenu.Controls.Add(this.m_ButtonEvents);
+               this.m_PanelMenu.Controls.Add(m_ButtonEvents);
                this.m_PanelMenu.Controls.Add(this.m_ButtonPages);
                this.m_PanelMenu.Controls.Add(this.m_buttonGroups);
                this.m_PanelMenu.Controls.Add(this.m_ButtonAlbums);
@@ -90,6 +91,90 @@ namespace BasicFacebookFeatures
                this.m_PanelMenu.Name = "m_PanelMenu";
                this.m_PanelMenu.Size = new System.Drawing.Size(269, 418);
                this.m_PanelMenu.TabIndex = 11;
+               // 
+               // m_buttonMyFeature2
+               // 
+               this.m_buttonMyFeature2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+               this.m_buttonMyFeature2.Dock = System.Windows.Forms.DockStyle.Top;
+               this.m_buttonMyFeature2.FlatAppearance.BorderSize = 0;
+               this.m_buttonMyFeature2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+               this.m_buttonMyFeature2.ForeColor = System.Drawing.Color.Gainsboro;
+               this.m_buttonMyFeature2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+               this.m_buttonMyFeature2.Location = new System.Drawing.Point(0, 328);
+               this.m_buttonMyFeature2.Name = "m_buttonMyFeature2";
+               this.m_buttonMyFeature2.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+               this.m_buttonMyFeature2.Size = new System.Drawing.Size(269, 42);
+               this.m_buttonMyFeature2.TabIndex = 7;
+               this.m_buttonMyFeature2.Text = "My Feature 2";
+               this.m_buttonMyFeature2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+               this.m_buttonMyFeature2.UseVisualStyleBackColor = true;
+               this.m_buttonMyFeature2.Click += new System.EventHandler(this.m_buttonMyFeature2_Click);
+               // 
+               // m_PanelUpperMenu
+               // 
+               this.m_PanelUpperMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+               this.m_PanelUpperMenu.Controls.Add(this.pictureBoxProfile);
+               this.m_PanelUpperMenu.Controls.Add(this.m_LabelEmail);
+               this.m_PanelUpperMenu.Controls.Add(this.m_LabelName);
+               this.m_PanelUpperMenu.Controls.Add(this.m_LabelGender);
+               this.m_PanelUpperMenu.Controls.Add(this.m_LabelBirthday);
+               this.m_PanelUpperMenu.Dock = System.Windows.Forms.DockStyle.Top;
+               this.m_PanelUpperMenu.Location = new System.Drawing.Point(0, 0);
+               this.m_PanelUpperMenu.Name = "m_PanelUpperMenu";
+               this.m_PanelUpperMenu.Size = new System.Drawing.Size(269, 76);
+               this.m_PanelUpperMenu.TabIndex = 0;
+               // 
+               // m_LabelName
+               // 
+               this.m_LabelName.AutoSize = true;
+               this.m_LabelName.ForeColor = System.Drawing.Color.Silver;
+               this.m_LabelName.Location = new System.Drawing.Point(109, 3);
+               this.m_LabelName.Name = "m_LabelName";
+               this.m_LabelName.Size = new System.Drawing.Size(123, 13);
+               this.m_LabelName.TabIndex = 1;
+               this.m_LabelName.Text = "Name: no data to show:(";
+               // 
+               // m_LabelGender
+               // 
+               this.m_LabelGender.AutoSize = true;
+               this.m_LabelGender.ForeColor = System.Drawing.Color.Silver;
+               this.m_LabelGender.Location = new System.Drawing.Point(109, 39);
+               this.m_LabelGender.Name = "m_LabelGender";
+               this.m_LabelGender.Size = new System.Drawing.Size(133, 13);
+               this.m_LabelGender.TabIndex = 3;
+               this.m_LabelGender.Text = "Gender: no data to show :(";
+               // 
+               // m_TtilePanel
+               // 
+               this.m_TtilePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(106)))), ((int)(((byte)(218)))));
+               this.m_TtilePanel.Controls.Add(this.m_LabelTitle);
+               this.m_TtilePanel.Dock = System.Windows.Forms.DockStyle.Top;
+               this.m_TtilePanel.Location = new System.Drawing.Point(269, 0);
+               this.m_TtilePanel.Name = "m_TtilePanel";
+               this.m_TtilePanel.Size = new System.Drawing.Size(680, 76);
+               this.m_TtilePanel.TabIndex = 12;
+               this.m_TtilePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.m_TtilePanel_MouseDown);
+               // 
+               // m_LabelTitle
+               // 
+               this.m_LabelTitle.AutoSize = true;
+               this.m_LabelTitle.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.m_LabelTitle.ForeColor = System.Drawing.Color.White;
+               this.m_LabelTitle.Location = new System.Drawing.Point(296, 21);
+               this.m_LabelTitle.Name = "m_LabelTitle";
+               this.m_LabelTitle.Size = new System.Drawing.Size(121, 33);
+               this.m_LabelTitle.TabIndex = 0;
+               this.m_LabelTitle.Text = "Facebook";
+               // 
+               // m_PanelDesktop
+               // 
+               this.m_PanelDesktop.BackColor = System.Drawing.Color.White;
+               this.m_PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+               this.m_PanelDesktop.Location = new System.Drawing.Point(269, 76);
+               this.m_PanelDesktop.Name = "m_PanelDesktop";
+               this.m_PanelDesktop.Size = new System.Drawing.Size(680, 342);
+               this.m_PanelDesktop.TabIndex = 13;
+               this.m_PanelDesktop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.m_PanelDesktop_MouseDown);
                // 
                // m_ButtonLogout
                // 
@@ -111,24 +196,6 @@ namespace BasicFacebookFeatures
                this.m_ButtonLogout.UseVisualStyleBackColor = true;
                this.m_ButtonLogout.Click += new System.EventHandler(this.m_ButtonLogout_Click);
                // 
-               // m_buttonMyFeature2
-               // 
-               this.m_buttonMyFeature2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-               this.m_buttonMyFeature2.Dock = System.Windows.Forms.DockStyle.Top;
-               this.m_buttonMyFeature2.FlatAppearance.BorderSize = 0;
-               this.m_buttonMyFeature2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.m_buttonMyFeature2.ForeColor = System.Drawing.Color.Gainsboro;
-               this.m_buttonMyFeature2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-               this.m_buttonMyFeature2.Location = new System.Drawing.Point(0, 328);
-               this.m_buttonMyFeature2.Name = "m_buttonMyFeature2";
-               this.m_buttonMyFeature2.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-               this.m_buttonMyFeature2.Size = new System.Drawing.Size(269, 42);
-               this.m_buttonMyFeature2.TabIndex = 7;
-               this.m_buttonMyFeature2.Text = "My Feature 2";
-               this.m_buttonMyFeature2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-               this.m_buttonMyFeature2.UseVisualStyleBackColor = true;
-               this.m_buttonMyFeature2.Click += new System.EventHandler(this.m_buttonMyFeature2_Click);
-               // 
                // m_ButtonMyFeature1
                // 
                this.m_ButtonMyFeature1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -136,36 +203,38 @@ namespace BasicFacebookFeatures
                this.m_ButtonMyFeature1.FlatAppearance.BorderSize = 0;
                this.m_ButtonMyFeature1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
                this.m_ButtonMyFeature1.ForeColor = System.Drawing.Color.Gainsboro;
+               this.m_ButtonMyFeature1.Image = global::BasicFacebookFeatures.Properties.Resources._2205225_favorite_like_love_popular_icon;
                this.m_ButtonMyFeature1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
                this.m_ButtonMyFeature1.Location = new System.Drawing.Point(0, 286);
                this.m_ButtonMyFeature1.Name = "m_ButtonMyFeature1";
                this.m_ButtonMyFeature1.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
                this.m_ButtonMyFeature1.Size = new System.Drawing.Size(269, 42);
                this.m_ButtonMyFeature1.TabIndex = 6;
-               this.m_ButtonMyFeature1.Text = "My Feature 1";
+               this.m_ButtonMyFeature1.Text = "   My single friends";
                this.m_ButtonMyFeature1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+               this.m_ButtonMyFeature1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
                this.m_ButtonMyFeature1.UseVisualStyleBackColor = true;
                this.m_ButtonMyFeature1.Click += new System.EventHandler(this.m_ButtonMyFeature1_Click);
                // 
                // m_ButtonEvents
                // 
-               this.m_ButtonEvents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-               this.m_ButtonEvents.Dock = System.Windows.Forms.DockStyle.Top;
-               this.m_ButtonEvents.FlatAppearance.BorderSize = 0;
-               this.m_ButtonEvents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.m_ButtonEvents.ForeColor = System.Drawing.Color.Gainsboro;
-               this.m_ButtonEvents.Image = global::BasicFacebookFeatures.Properties.Resources._751098_events_date_event_party_schedule_icon;
-               this.m_ButtonEvents.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-               this.m_ButtonEvents.Location = new System.Drawing.Point(0, 244);
-               this.m_ButtonEvents.Name = "m_ButtonEvents";
-               this.m_ButtonEvents.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-               this.m_ButtonEvents.Size = new System.Drawing.Size(269, 42);
-               this.m_ButtonEvents.TabIndex = 5;
-               this.m_ButtonEvents.Text = "   Events";
-               this.m_ButtonEvents.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-               this.m_ButtonEvents.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-               this.m_ButtonEvents.UseVisualStyleBackColor = true;
-               this.m_ButtonEvents.Click += new System.EventHandler(this.m_ButtonEvents_Click);
+               m_ButtonEvents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+               m_ButtonEvents.Dock = System.Windows.Forms.DockStyle.Top;
+               m_ButtonEvents.FlatAppearance.BorderSize = 0;
+               m_ButtonEvents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+               m_ButtonEvents.ForeColor = System.Drawing.Color.Transparent;
+               m_ButtonEvents.Image = global::BasicFacebookFeatures.Properties.Resources._2324137_balloons_events_organizing_party_planning_icon;
+               m_ButtonEvents.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+               m_ButtonEvents.Location = new System.Drawing.Point(0, 244);
+               m_ButtonEvents.Name = "m_ButtonEvents";
+               m_ButtonEvents.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+               m_ButtonEvents.Size = new System.Drawing.Size(269, 42);
+               m_ButtonEvents.TabIndex = 5;
+               m_ButtonEvents.Text = "   Events";
+               m_ButtonEvents.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+               m_ButtonEvents.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+               m_ButtonEvents.UseVisualStyleBackColor = true;
+               m_ButtonEvents.Click += new System.EventHandler(this.m_ButtonEvents_Click);
                // 
                // m_ButtonPages
                // 
@@ -246,20 +315,6 @@ namespace BasicFacebookFeatures
                this.m_ButtonStatus.UseVisualStyleBackColor = true;
                this.m_ButtonStatus.Click += new System.EventHandler(this.m_ButtonStatus_Click);
                // 
-               // m_PanelUpperMenu
-               // 
-               this.m_PanelUpperMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-               this.m_PanelUpperMenu.Controls.Add(this.pictureBoxProfile);
-               this.m_PanelUpperMenu.Controls.Add(this.m_LabelEmail);
-               this.m_PanelUpperMenu.Controls.Add(this.m_LabelName);
-               this.m_PanelUpperMenu.Controls.Add(this.m_LabelGender);
-               this.m_PanelUpperMenu.Controls.Add(this.m_LabelBirthday);
-               this.m_PanelUpperMenu.Dock = System.Windows.Forms.DockStyle.Top;
-               this.m_PanelUpperMenu.Location = new System.Drawing.Point(0, 0);
-               this.m_PanelUpperMenu.Name = "m_PanelUpperMenu";
-               this.m_PanelUpperMenu.Size = new System.Drawing.Size(269, 76);
-               this.m_PanelUpperMenu.TabIndex = 0;
-               // 
                // pictureBoxProfile
                // 
                this.pictureBoxProfile.Dock = System.Windows.Forms.DockStyle.Left;
@@ -269,58 +324,6 @@ namespace BasicFacebookFeatures
                this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
                this.pictureBoxProfile.TabIndex = 0;
                this.pictureBoxProfile.TabStop = false;
-               // 
-               // m_LabelName
-               // 
-               this.m_LabelName.AutoSize = true;
-               this.m_LabelName.ForeColor = System.Drawing.Color.Silver;
-               this.m_LabelName.Location = new System.Drawing.Point(109, 3);
-               this.m_LabelName.Name = "m_LabelName";
-               this.m_LabelName.Size = new System.Drawing.Size(123, 13);
-               this.m_LabelName.TabIndex = 1;
-               this.m_LabelName.Text = "Name: no data to show:(";
-               // 
-               // m_LabelGender
-               // 
-               this.m_LabelGender.AutoSize = true;
-               this.m_LabelGender.ForeColor = System.Drawing.Color.Silver;
-               this.m_LabelGender.Location = new System.Drawing.Point(109, 39);
-               this.m_LabelGender.Name = "m_LabelGender";
-               this.m_LabelGender.Size = new System.Drawing.Size(133, 13);
-               this.m_LabelGender.TabIndex = 3;
-               this.m_LabelGender.Text = "Gender: no data to show :(";
-               // 
-               // m_TtilePanel
-               // 
-               this.m_TtilePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(106)))), ((int)(((byte)(218)))));
-               this.m_TtilePanel.Controls.Add(this.m_LabelTitle);
-               this.m_TtilePanel.Dock = System.Windows.Forms.DockStyle.Top;
-               this.m_TtilePanel.Location = new System.Drawing.Point(269, 0);
-               this.m_TtilePanel.Name = "m_TtilePanel";
-               this.m_TtilePanel.Size = new System.Drawing.Size(680, 76);
-               this.m_TtilePanel.TabIndex = 12;
-               this.m_TtilePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.m_TtilePanel_MouseDown);
-               // 
-               // m_LabelTitle
-               // 
-               this.m_LabelTitle.AutoSize = true;
-               this.m_LabelTitle.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.m_LabelTitle.ForeColor = System.Drawing.Color.White;
-               this.m_LabelTitle.Location = new System.Drawing.Point(296, 21);
-               this.m_LabelTitle.Name = "m_LabelTitle";
-               this.m_LabelTitle.Size = new System.Drawing.Size(121, 33);
-               this.m_LabelTitle.TabIndex = 0;
-               this.m_LabelTitle.Text = "Facebook";
-               // 
-               // m_PanelDesktop
-               // 
-               this.m_PanelDesktop.BackColor = System.Drawing.Color.White;
-               this.m_PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-               this.m_PanelDesktop.Location = new System.Drawing.Point(269, 76);
-               this.m_PanelDesktop.Name = "m_PanelDesktop";
-               this.m_PanelDesktop.Size = new System.Drawing.Size(680, 342);
-               this.m_PanelDesktop.TabIndex = 13;
-               this.m_PanelDesktop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.m_PanelDesktop_MouseDown);
                // 
                // FcbForm
                // 
@@ -339,9 +342,9 @@ namespace BasicFacebookFeatures
                this.m_PanelMenu.ResumeLayout(false);
                this.m_PanelUpperMenu.ResumeLayout(false);
                this.m_PanelUpperMenu.PerformLayout();
-               ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
                this.m_TtilePanel.ResumeLayout(false);
                this.m_TtilePanel.PerformLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
                this.ResumeLayout(false);
 
           }
@@ -359,7 +362,6 @@ namespace BasicFacebookFeatures
           private System.Windows.Forms.Button m_ButtonLogout;
           private System.Windows.Forms.Button m_buttonMyFeature2;
           private System.Windows.Forms.Button m_ButtonMyFeature1;
-          private System.Windows.Forms.Button m_ButtonEvents;
           private System.Windows.Forms.Button m_ButtonPages;
           private System.Windows.Forms.Button m_buttonGroups;
           private System.Windows.Forms.Button m_ButtonAlbums;

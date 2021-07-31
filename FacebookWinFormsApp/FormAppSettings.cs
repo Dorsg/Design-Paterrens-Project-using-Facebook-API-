@@ -1,24 +1,17 @@
-﻿using BasicFacebookFeatures;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
+﻿using System;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BasicFacebookFeatures
 {
      public partial class FormAppSettings : Form
      {
+          private readonly StringBuilder m_PermissionsStringBuilder = new StringBuilder();
           public FormAppSettings()
           {
                InitializeComponent();
           }
 
-          StringBuilder m_PermissionsStringBuilder = new StringBuilder();
           private void buttonRefreshPermissions_Click(object sender, EventArgs e)
           {
                textBoxPermissions.Clear();

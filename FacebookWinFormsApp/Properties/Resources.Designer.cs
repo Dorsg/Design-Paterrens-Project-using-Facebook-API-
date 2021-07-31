@@ -83,9 +83,29 @@ namespace BasicFacebookFeatures.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2205225_favorite_like_love_popular_icon {
+            get {
+                object obj = ResourceManager.GetObject("2205225_favorite_like_love_popular_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2239660_calendar_date_events_icon {
             get {
                 object obj = ResourceManager.GetObject("2239660_calendar_date_events_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2324137_balloons_events_organizing_party_planning_icon {
+            get {
+                object obj = ResourceManager.GetObject("2324137_balloons_events_organizing_party_planning_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

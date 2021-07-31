@@ -128,7 +128,7 @@ namespace BasicFacebookFeatures
 
           private void m_ButtonMyFeature1_Click(object sender, EventArgs e)
           {
-               //OpenChildForm(new Forms.StatusForm(), sender);
+               OpenChildForm(new Forms.DatingForm(m_LoggedInUser), sender);
           }
 
           private void m_buttonMyFeature2_Click(object sender, EventArgs e)
