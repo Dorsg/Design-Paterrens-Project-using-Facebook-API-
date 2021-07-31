@@ -30,9 +30,9 @@ namespace BasicFacebookFeatures.Forms
           private void InitializeComponent()
           {
                this.m_ListBoxAlbumList = new System.Windows.Forms.ListBox();
-               this.m_PictureBox = new System.Windows.Forms.PictureBox();
                this.m_LabelAlbumList = new System.Windows.Forms.Label();
                this.m_LabelPictureBox = new System.Windows.Forms.Label();
+               this.m_PictureBox = new System.Windows.Forms.PictureBox();
                ((System.ComponentModel.ISupportInitialize)(this.m_PictureBox)).BeginInit();
                this.SuspendLayout();
                // 
@@ -44,15 +44,6 @@ namespace BasicFacebookFeatures.Forms
                this.m_ListBoxAlbumList.Size = new System.Drawing.Size(323, 277);
                this.m_ListBoxAlbumList.TabIndex = 0;
                this.m_ListBoxAlbumList.SelectedIndexChanged += new System.EventHandler(this.m_ListBoxAlbumList_SelectedIndexChanged);
-               // 
-               // m_PictureBox
-               // 
-               this.m_PictureBox.Location = new System.Drawing.Point(418, 79);
-               this.m_PictureBox.Name = "m_PictureBox";
-               this.m_PictureBox.Size = new System.Drawing.Size(245, 194);
-               this.m_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-               this.m_PictureBox.TabIndex = 1;
-               this.m_PictureBox.TabStop = false;
                // 
                // m_LabelAlbumList
                // 
@@ -73,6 +64,16 @@ namespace BasicFacebookFeatures.Forms
                this.m_LabelPictureBox.Size = new System.Drawing.Size(91, 19);
                this.m_LabelPictureBox.TabIndex = 3;
                this.m_LabelPictureBox.Text = "Main picture";
+               // 
+               // m_PictureBox
+               // 
+               this.m_PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+               this.m_PictureBox.Location = new System.Drawing.Point(418, 79);
+               this.m_PictureBox.Name = "m_PictureBox";
+               this.m_PictureBox.Size = new System.Drawing.Size(245, 194);
+               this.m_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+               this.m_PictureBox.TabIndex = 1;
+               this.m_PictureBox.TabStop = false;
                // 
                // AlbumsForm
                // 

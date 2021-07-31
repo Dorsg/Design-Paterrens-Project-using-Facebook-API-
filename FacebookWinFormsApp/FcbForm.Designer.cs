@@ -57,7 +57,7 @@ namespace BasicFacebookFeatures
                // m_LabelEmail
                // 
                this.m_LabelEmail.AutoSize = true;
-               this.m_LabelEmail.ForeColor = System.Drawing.Color.Silver;
+               this.m_LabelEmail.ForeColor = System.Drawing.Color.White;
                this.m_LabelEmail.Location = new System.Drawing.Point(109, 57);
                this.m_LabelEmail.Name = "m_LabelEmail";
                this.m_LabelEmail.Size = new System.Drawing.Size(123, 13);
@@ -67,7 +67,7 @@ namespace BasicFacebookFeatures
                // m_LabelBirthday
                // 
                this.m_LabelBirthday.AutoSize = true;
-               this.m_LabelBirthday.ForeColor = System.Drawing.Color.Silver;
+               this.m_LabelBirthday.ForeColor = System.Drawing.Color.White;
                this.m_LabelBirthday.Location = new System.Drawing.Point(109, 21);
                this.m_LabelBirthday.Name = "m_LabelBirthday";
                this.m_LabelBirthday.Size = new System.Drawing.Size(136, 13);
@@ -94,11 +94,12 @@ namespace BasicFacebookFeatures
                // 
                // m_buttonMyFeature2
                // 
-               this.m_buttonMyFeature2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+               this.m_buttonMyFeature2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
+               this.m_buttonMyFeature2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
                this.m_buttonMyFeature2.Dock = System.Windows.Forms.DockStyle.Top;
                this.m_buttonMyFeature2.FlatAppearance.BorderSize = 0;
                this.m_buttonMyFeature2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.m_buttonMyFeature2.ForeColor = System.Drawing.Color.Gainsboro;
+               this.m_buttonMyFeature2.ForeColor = System.Drawing.Color.Black;
                this.m_buttonMyFeature2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
                this.m_buttonMyFeature2.Location = new System.Drawing.Point(0, 328);
                this.m_buttonMyFeature2.Name = "m_buttonMyFeature2";
@@ -107,12 +108,12 @@ namespace BasicFacebookFeatures
                this.m_buttonMyFeature2.TabIndex = 7;
                this.m_buttonMyFeature2.Text = "My Feature 2";
                this.m_buttonMyFeature2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-               this.m_buttonMyFeature2.UseVisualStyleBackColor = true;
+               this.m_buttonMyFeature2.UseVisualStyleBackColor = false;
                this.m_buttonMyFeature2.Click += new System.EventHandler(this.m_buttonMyFeature2_Click);
                // 
                // m_PanelUpperMenu
                // 
-               this.m_PanelUpperMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+               this.m_PanelUpperMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(106)))), ((int)(((byte)(218)))));
                this.m_PanelUpperMenu.Controls.Add(this.pictureBoxProfile);
                this.m_PanelUpperMenu.Controls.Add(this.m_LabelEmail);
                this.m_PanelUpperMenu.Controls.Add(this.m_LabelName);
@@ -127,7 +128,7 @@ namespace BasicFacebookFeatures
                // m_LabelName
                // 
                this.m_LabelName.AutoSize = true;
-               this.m_LabelName.ForeColor = System.Drawing.Color.Silver;
+               this.m_LabelName.ForeColor = System.Drawing.Color.White;
                this.m_LabelName.Location = new System.Drawing.Point(109, 3);
                this.m_LabelName.Name = "m_LabelName";
                this.m_LabelName.Size = new System.Drawing.Size(123, 13);
@@ -137,7 +138,7 @@ namespace BasicFacebookFeatures
                // m_LabelGender
                // 
                this.m_LabelGender.AutoSize = true;
-               this.m_LabelGender.ForeColor = System.Drawing.Color.Silver;
+               this.m_LabelGender.ForeColor = System.Drawing.Color.White;
                this.m_LabelGender.Location = new System.Drawing.Point(109, 39);
                this.m_LabelGender.Name = "m_LabelGender";
                this.m_LabelGender.Size = new System.Drawing.Size(133, 13);
@@ -178,11 +179,12 @@ namespace BasicFacebookFeatures
                // 
                // m_ButtonLogout
                // 
-               this.m_ButtonLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+               this.m_ButtonLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
+               this.m_ButtonLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
                this.m_ButtonLogout.Dock = System.Windows.Forms.DockStyle.Top;
                this.m_ButtonLogout.FlatAppearance.BorderSize = 0;
                this.m_ButtonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.m_ButtonLogout.ForeColor = System.Drawing.Color.Gainsboro;
+               this.m_ButtonLogout.ForeColor = System.Drawing.Color.Black;
                this.m_ButtonLogout.Image = global::BasicFacebookFeatures.Properties.Resources._4115235_exit_logout_sign_out_icon;
                this.m_ButtonLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
                this.m_ButtonLogout.Location = new System.Drawing.Point(0, 370);
@@ -193,16 +195,17 @@ namespace BasicFacebookFeatures
                this.m_ButtonLogout.Text = "   Logout";
                this.m_ButtonLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
                this.m_ButtonLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-               this.m_ButtonLogout.UseVisualStyleBackColor = true;
+               this.m_ButtonLogout.UseVisualStyleBackColor = false;
                this.m_ButtonLogout.Click += new System.EventHandler(this.m_ButtonLogout_Click);
                // 
                // m_ButtonMyFeature1
                // 
-               this.m_ButtonMyFeature1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+               this.m_ButtonMyFeature1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
+               this.m_ButtonMyFeature1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
                this.m_ButtonMyFeature1.Dock = System.Windows.Forms.DockStyle.Top;
                this.m_ButtonMyFeature1.FlatAppearance.BorderSize = 0;
                this.m_ButtonMyFeature1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.m_ButtonMyFeature1.ForeColor = System.Drawing.Color.Gainsboro;
+               this.m_ButtonMyFeature1.ForeColor = System.Drawing.Color.Black;
                this.m_ButtonMyFeature1.Image = global::BasicFacebookFeatures.Properties.Resources._2205225_favorite_like_love_popular_icon;
                this.m_ButtonMyFeature1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
                this.m_ButtonMyFeature1.Location = new System.Drawing.Point(0, 286);
@@ -213,16 +216,17 @@ namespace BasicFacebookFeatures
                this.m_ButtonMyFeature1.Text = "   My single friends";
                this.m_ButtonMyFeature1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
                this.m_ButtonMyFeature1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-               this.m_ButtonMyFeature1.UseVisualStyleBackColor = true;
+               this.m_ButtonMyFeature1.UseVisualStyleBackColor = false;
                this.m_ButtonMyFeature1.Click += new System.EventHandler(this.m_ButtonMyFeature1_Click);
                // 
                // m_ButtonEvents
                // 
-               m_ButtonEvents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+               m_ButtonEvents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
+               m_ButtonEvents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
                m_ButtonEvents.Dock = System.Windows.Forms.DockStyle.Top;
                m_ButtonEvents.FlatAppearance.BorderSize = 0;
                m_ButtonEvents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               m_ButtonEvents.ForeColor = System.Drawing.Color.Transparent;
+               m_ButtonEvents.ForeColor = System.Drawing.Color.Black;
                m_ButtonEvents.Image = global::BasicFacebookFeatures.Properties.Resources._2324137_balloons_events_organizing_party_planning_icon;
                m_ButtonEvents.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
                m_ButtonEvents.Location = new System.Drawing.Point(0, 244);
@@ -233,16 +237,17 @@ namespace BasicFacebookFeatures
                m_ButtonEvents.Text = "   Events";
                m_ButtonEvents.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
                m_ButtonEvents.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-               m_ButtonEvents.UseVisualStyleBackColor = true;
+               m_ButtonEvents.UseVisualStyleBackColor = false;
                m_ButtonEvents.Click += new System.EventHandler(this.m_ButtonEvents_Click);
                // 
                // m_ButtonPages
                // 
-               this.m_ButtonPages.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+               this.m_ButtonPages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
+               this.m_ButtonPages.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
                this.m_ButtonPages.Dock = System.Windows.Forms.DockStyle.Top;
                this.m_ButtonPages.FlatAppearance.BorderSize = 0;
                this.m_ButtonPages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.m_ButtonPages.ForeColor = System.Drawing.Color.Gainsboro;
+               this.m_ButtonPages.ForeColor = System.Drawing.Color.Black;
                this.m_ButtonPages.Image = global::BasicFacebookFeatures.Properties.Resources._3209289_copy_files_pages_papers_print_icon1;
                this.m_ButtonPages.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
                this.m_ButtonPages.Location = new System.Drawing.Point(0, 202);
@@ -253,16 +258,17 @@ namespace BasicFacebookFeatures
                this.m_ButtonPages.Text = "   Pages";
                this.m_ButtonPages.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
                this.m_ButtonPages.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-               this.m_ButtonPages.UseVisualStyleBackColor = true;
+               this.m_ButtonPages.UseVisualStyleBackColor = false;
                this.m_ButtonPages.Click += new System.EventHandler(this.m_ButtonPages_Click);
                // 
                // m_buttonGroups
                // 
-               this.m_buttonGroups.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+               this.m_buttonGroups.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
+               this.m_buttonGroups.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
                this.m_buttonGroups.Dock = System.Windows.Forms.DockStyle.Top;
                this.m_buttonGroups.FlatAppearance.BorderSize = 0;
                this.m_buttonGroups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.m_buttonGroups.ForeColor = System.Drawing.Color.Gainsboro;
+               this.m_buttonGroups.ForeColor = System.Drawing.Color.Black;
                this.m_buttonGroups.Image = global::BasicFacebookFeatures.Properties.Resources._309041_users_group_people_icon;
                this.m_buttonGroups.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
                this.m_buttonGroups.Location = new System.Drawing.Point(0, 160);
@@ -273,16 +279,17 @@ namespace BasicFacebookFeatures
                this.m_buttonGroups.Text = "   Groups";
                this.m_buttonGroups.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
                this.m_buttonGroups.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-               this.m_buttonGroups.UseVisualStyleBackColor = true;
+               this.m_buttonGroups.UseVisualStyleBackColor = false;
                this.m_buttonGroups.Click += new System.EventHandler(this.m_buttonGroups_Click);
                // 
                // m_ButtonAlbums
                // 
-               this.m_ButtonAlbums.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+               this.m_ButtonAlbums.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
+               this.m_ButtonAlbums.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
                this.m_ButtonAlbums.Dock = System.Windows.Forms.DockStyle.Top;
                this.m_ButtonAlbums.FlatAppearance.BorderSize = 0;
                this.m_ButtonAlbums.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.m_ButtonAlbums.ForeColor = System.Drawing.Color.Gainsboro;
+               this.m_ButtonAlbums.ForeColor = System.Drawing.Color.Black;
                this.m_ButtonAlbums.Image = global::BasicFacebookFeatures.Properties.Resources._809486_albums_media_multimedia_photo_album_photos_icon__2_;
                this.m_ButtonAlbums.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
                this.m_ButtonAlbums.Location = new System.Drawing.Point(0, 118);
@@ -293,16 +300,17 @@ namespace BasicFacebookFeatures
                this.m_ButtonAlbums.Text = "   Albums";
                this.m_ButtonAlbums.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
                this.m_ButtonAlbums.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-               this.m_ButtonAlbums.UseVisualStyleBackColor = true;
+               this.m_ButtonAlbums.UseVisualStyleBackColor = false;
                this.m_ButtonAlbums.Click += new System.EventHandler(this.m_ButtonAlbums_Click);
                // 
                // m_ButtonStatus
                // 
+               this.m_ButtonStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
                this.m_ButtonStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
                this.m_ButtonStatus.Dock = System.Windows.Forms.DockStyle.Top;
                this.m_ButtonStatus.FlatAppearance.BorderSize = 0;
                this.m_ButtonStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.m_ButtonStatus.ForeColor = System.Drawing.Color.Gainsboro;
+               this.m_ButtonStatus.ForeColor = System.Drawing.Color.Black;
                this.m_ButtonStatus.Image = global::BasicFacebookFeatures.Properties.Resources._6590519_communication_email_letter_post_icon;
                this.m_ButtonStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
                this.m_ButtonStatus.Location = new System.Drawing.Point(0, 76);
@@ -312,11 +320,12 @@ namespace BasicFacebookFeatures
                this.m_ButtonStatus.TabIndex = 1;
                this.m_ButtonStatus.Text = "   Post a status";
                this.m_ButtonStatus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-               this.m_ButtonStatus.UseVisualStyleBackColor = true;
+               this.m_ButtonStatus.UseVisualStyleBackColor = false;
                this.m_ButtonStatus.Click += new System.EventHandler(this.m_ButtonStatus_Click);
                // 
                // pictureBoxProfile
                // 
+               this.pictureBoxProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
                this.pictureBoxProfile.Dock = System.Windows.Forms.DockStyle.Left;
                this.pictureBoxProfile.Location = new System.Drawing.Point(0, 0);
                this.pictureBoxProfile.Name = "pictureBoxProfile";
