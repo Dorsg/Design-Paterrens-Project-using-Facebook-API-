@@ -29,8 +29,9 @@ namespace BasicFacebookFeatures.Forms
 
                foreach (User user in m_LoggedInUser.Friends)
                {
-                   // if (user.Gender != m_LoggedInUser.Gender && 
-                      //  user.RelationshipStatus == User.eRelationshipStatus.Single)
+                    
+                    if (user.Gender != m_LoggedInUser.Gender && 
+                        user.RelationshipStatus == User.eRelationshipStatus.Single)
                     {
                          m_ListBoxSingles.Items.Add(user);
                     }

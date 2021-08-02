@@ -120,12 +120,12 @@ namespace BasicFacebookFeatures
 
           private void m_ButtonPages_Click(object sender, EventArgs e)
           {
-               OpenChildForm(new Forms.PagesForm(), sender);
+               OpenChildForm(new Forms.PagesForm(m_LoggedInUser), sender);
           }
 
           private void m_ButtonEvents_Click(object sender, EventArgs e)
           {
-               OpenChildForm(new Forms.EventsForm(), sender);
+              OpenChildForm(new Forms.EventsForm(m_LoggedInUser), sender);
           }
 
           private void m_ButtonMyFeature1_Click(object sender, EventArgs e)
