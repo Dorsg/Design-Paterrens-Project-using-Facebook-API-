@@ -89,6 +89,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasicFacebookFeatures\Forms\TriviaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FcbForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +148,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BasicFacebookFeatures\Forms\TriviaForm.resx">
+      <DependentUpon>TriviaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FcbForm.resx">
       <DependentUpon>FcbForm.cs</DependentUpon>
     </EmbeddedResource>
