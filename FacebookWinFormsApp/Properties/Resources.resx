@@ -130,11 +130,11 @@
   <data name="809486_albums_media_multimedia_photo album_photos_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\809486_albums_media_multimedia_photo album_photos_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="2180486_calendar_events_fb_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2180486_calendar_events_fb_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="3209289_copy_files_pages_papers_print_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3209289_copy_files_pages_papers_print_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2205225_favorite_like_love_popular_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2205225_favorite_like_love_popular_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="751098_events_date_event_party_schedule_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\751098_events_date_event_party_schedule_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,8 +148,8 @@
   <data name="3209289_copy_files_pages_papers_print_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3209289_copy_files_pages_papers_print_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2180486_calendar_events_fb_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2180486_calendar_events_fb_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2205225_favorite_like_love_popular_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2205225_favorite_like_love_popular_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="2561383_settings_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2561383_settings_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,6 +169,9 @@
   <data name="3330248" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3330248.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="2324137_balloons_events_organizing_party_planning_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2324137_balloons_events_organizing_party_planning_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="809486_albums_media_multimedia_photo album_photos_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\809486_albums_media_multimedia_photo album_photos_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -184,7 +187,7 @@
   <data name="4115235_exit_logout_sign out_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4115235_exit_logout_sign out_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2324137_balloons_events_organizing_party_planning_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2324137_balloons_events_organizing_party_planning_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="6472608_birthday_cake_celebration_festival_party_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6472608_birthday_cake_celebration_festival_party_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
