@@ -41,6 +41,7 @@ namespace BasicFacebookFeatures.Forms
                if (m_ListBoxGroupList.Items.Count == 0)
                {
                     m_LabelGroupPic.Text = "no data :(";
+                    MessageBox.Show("No groups with birthday today to retrieve :(");
                }
           }
 

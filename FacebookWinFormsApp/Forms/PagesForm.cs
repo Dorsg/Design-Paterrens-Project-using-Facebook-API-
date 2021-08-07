@@ -29,19 +29,20 @@ namespace BasicFacebookFeatures.Forms
 
             try
             {
-                foreach (Page page in m_LoggedInUser.LikedPages)
-                {
-                    listBoxPages.Items.Add(page);
-                }
+                 foreach(Page page in m_LoggedInUser.LikedPages)
+                 {
+                      listBoxPages.Items.Add(page);
+                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                 MessageBox.Show(ex.Message);
             }
 
             if (listBoxPages.Items.Count == 0)
             {
                 m_labelPagesPic.Text = "no data :(";
+                MessageBox.Show("No pages to retrieve :(");
 
             }
         }

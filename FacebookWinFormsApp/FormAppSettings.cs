@@ -30,6 +30,7 @@ namespace BasicFacebookFeatures
                {
                     comboAppID.SelectedIndex = 0;
                }
+
                AppSettings.s_AppID = comboAppID.SelectedItem.ToString();
                AppSettings.s_Permissions = new string[listBoxPermissions.CheckedItems.Count];
                listBoxPermissions.CheckedItems.CopyTo(AppSettings.s_Permissions, 0);

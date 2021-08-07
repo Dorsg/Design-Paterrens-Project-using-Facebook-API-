@@ -34,7 +34,8 @@ namespace BasicFacebookFeatures.Forms
             if (listBoxEvents.Items.Count == 0)
             {
                 m_LabelEventPic.Text = "no data :(";
-            }
+                MessageBox.Show("No events to retrieve :(");
+               }
         }
 
         private void listBoxEvents_SelectedIndexChanged(object sender, EventArgs e)

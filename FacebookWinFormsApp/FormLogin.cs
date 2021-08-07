@@ -5,14 +5,14 @@ using FacebookWrapper;
 
 namespace BasicFacebookFeatures
 {
-     public partial class FormMain : Form
+     public partial class FormLogin : Form
      {
           private User m_LoggedInUser;
           private LoginResult m_LoginResult;
           private FcbForm m_MainForm;
-          private FormAppSettings m_FormAppSettings = null;
+          private FormAppSettings m_FormAppSettings;
 
-          public FormMain()
+          public FormLogin()
           {
                InitializeComponent();
                FacebookWrapper.FacebookService.s_CollectionLimit = 100;
@@ -66,7 +66,6 @@ namespace BasicFacebookFeatures
                }
                m_FormAppSettings.ShowDialog();
           }
-
 
      }
      public static class AppSettings

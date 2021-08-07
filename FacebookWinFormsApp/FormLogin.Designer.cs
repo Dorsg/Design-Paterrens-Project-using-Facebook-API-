@@ -1,6 +1,6 @@
 ﻿namespace BasicFacebookFeatures
 {
-    partial class FormMain
+    partial class FormLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
                System.Windows.Forms.Button buttonLogin;
-               System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+               System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
                System.Windows.Forms.Button m_ButtonLoginSetting;
                this.pictureBox1 = new System.Windows.Forms.PictureBox();
                buttonLogin = new System.Windows.Forms.Button();
@@ -68,7 +68,7 @@
                m_ButtonLoginSetting.UseVisualStyleBackColor = true;
                m_ButtonLoginSetting.Click += new System.EventHandler(this.m_ButtonLoginSetting_Click);
                // 
-               // FormMain
+               // FormLogin
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -78,7 +78,7 @@
                this.Controls.Add(this.pictureBox1);
                this.Controls.Add(buttonLogin);
                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-               this.Name = "FormMain";
+               this.Name = "FormLogin";
                this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
                this.Text = "Facbook App";
                this.Load += new System.EventHandler(this.FormMain_Load);

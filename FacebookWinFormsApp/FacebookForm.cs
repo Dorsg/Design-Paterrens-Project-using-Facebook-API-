@@ -1,14 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using FacebookWrapper.ObjectModel;
 using FacebookWrapper;
 using System.Runtime.InteropServices;
+
+// features explanations:
+// feature 1:
+// find all of my single friends with a different gender than me and display them on a list
+// with their profile picture, age, city + map
+// feature 2:
+// find all of my friends that are celebrating their birthday today and display them on a list
+// with an ability to post an "happy birthday!" status on their page
 
 namespace BasicFacebookFeatures
 {
@@ -24,6 +27,7 @@ namespace BasicFacebookFeatures
                m_LoggedInUser = i_LoggedInUser;
                fetchUserInfo();
           }
+
           [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
           private extern static void ReleaseCapture();
           [DllImport("user32.DLL", EntryPoint = "SendMessage")]
