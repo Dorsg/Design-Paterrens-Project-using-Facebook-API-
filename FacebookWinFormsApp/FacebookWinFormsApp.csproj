@@ -89,11 +89,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FcbForm.cs">
+    <Compile Include="Forms\Birthdays.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FcbForm.Designer.cs">
-      <DependentUpon>FcbForm.cs</DependentUpon>
+    <Compile Include="FacebookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacebookForm.Designer.cs">
+      <DependentUpon>FacebookForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAppSettings.cs">
       <SubType>Form</SubType>
@@ -145,8 +148,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FcbForm.resx">
-      <DependentUpon>FcbForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Birthdays.resx">
+      <DependentUpon>Birthdays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacebookForm.resx">
+      <DependentUpon>FacebookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAppSettings.resx">
       <DependentUpon>FormAppSettings.cs</DependentUpon>
@@ -265,6 +271,10 @@
   <ItemGroup>
     <None Include="Resources\2324137_balloons_events_organizing_party_planning_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6472608_birthday_cake_celebration_festival_party_icon.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

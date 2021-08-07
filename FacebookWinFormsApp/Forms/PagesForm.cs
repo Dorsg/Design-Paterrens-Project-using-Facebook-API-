@@ -14,7 +14,7 @@ namespace BasicFacebookFeatures.Forms
 {
      public partial class PagesForm : Form
      {
-        User m_LoggedInUser;
+        private readonly User m_LoggedInUser;
         public PagesForm(User i_LoggedInUser)
         {
             m_LoggedInUser = i_LoggedInUser;

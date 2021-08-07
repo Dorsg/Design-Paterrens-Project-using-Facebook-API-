@@ -80,7 +80,7 @@ namespace BasicFacebookFeatures.Forms
                // 
                // m_PictureBoxSinglePic
                // 
-               this.m_PictureBoxSinglePic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+               this.m_PictureBoxSinglePic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
                this.m_PictureBoxSinglePic.Location = new System.Drawing.Point(157, 8);
                this.m_PictureBoxSinglePic.Name = "m_PictureBoxSinglePic";
                this.m_PictureBoxSinglePic.Size = new System.Drawing.Size(173, 135);

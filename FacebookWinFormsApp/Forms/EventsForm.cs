@@ -14,7 +14,7 @@ namespace BasicFacebookFeatures.Forms
 {
      public partial class EventsForm : Form
      {
-        User m_LoggedInUser;
+        private readonly User m_LoggedInUser;
         public EventsForm(User i_LoggedInUser)
         {
             m_LoggedInUser = i_LoggedInUser;

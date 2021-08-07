@@ -33,7 +33,6 @@ namespace BasicFacebookFeatures
                this.m_LabelEmail = new System.Windows.Forms.Label();
                this.m_LabelBirthday = new System.Windows.Forms.Label();
                this.m_PanelMenu = new System.Windows.Forms.Panel();
-               this.m_buttonMyFeature2 = new System.Windows.Forms.Button();
                this.m_PanelUpperMenu = new System.Windows.Forms.Panel();
                this.m_LabelName = new System.Windows.Forms.Label();
                this.m_LabelGender = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@ namespace BasicFacebookFeatures
                this.m_LabelTitle = new System.Windows.Forms.Label();
                this.m_PanelDesktop = new System.Windows.Forms.Panel();
                this.m_ButtonLogout = new System.Windows.Forms.Button();
+               this.m_buttonMyFeature2 = new System.Windows.Forms.Button();
                this.m_ButtonMyFeature1 = new System.Windows.Forms.Button();
                this.m_ButtonPages = new System.Windows.Forms.Button();
                this.m_buttonGroups = new System.Windows.Forms.Button();
@@ -91,25 +91,6 @@ namespace BasicFacebookFeatures
                this.m_PanelMenu.Name = "m_PanelMenu";
                this.m_PanelMenu.Size = new System.Drawing.Size(269, 418);
                this.m_PanelMenu.TabIndex = 11;
-               // 
-               // m_buttonMyFeature2
-               // 
-               this.m_buttonMyFeature2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
-               this.m_buttonMyFeature2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-               this.m_buttonMyFeature2.Dock = System.Windows.Forms.DockStyle.Top;
-               this.m_buttonMyFeature2.FlatAppearance.BorderSize = 0;
-               this.m_buttonMyFeature2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.m_buttonMyFeature2.ForeColor = System.Drawing.Color.Black;
-               this.m_buttonMyFeature2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-               this.m_buttonMyFeature2.Location = new System.Drawing.Point(0, 328);
-               this.m_buttonMyFeature2.Name = "m_buttonMyFeature2";
-               this.m_buttonMyFeature2.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-               this.m_buttonMyFeature2.Size = new System.Drawing.Size(269, 42);
-               this.m_buttonMyFeature2.TabIndex = 7;
-               this.m_buttonMyFeature2.Text = "My Feature 2";
-               this.m_buttonMyFeature2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-               this.m_buttonMyFeature2.UseVisualStyleBackColor = false;
-               this.m_buttonMyFeature2.Click += new System.EventHandler(this.m_buttonMyFeature2_Click);
                // 
                // m_PanelUpperMenu
                // 
@@ -197,6 +178,27 @@ namespace BasicFacebookFeatures
                this.m_ButtonLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
                this.m_ButtonLogout.UseVisualStyleBackColor = false;
                this.m_ButtonLogout.Click += new System.EventHandler(this.m_ButtonLogout_Click);
+               // 
+               // m_buttonMyFeature2
+               // 
+               this.m_buttonMyFeature2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
+               this.m_buttonMyFeature2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.m_buttonMyFeature2.Dock = System.Windows.Forms.DockStyle.Top;
+               this.m_buttonMyFeature2.FlatAppearance.BorderSize = 0;
+               this.m_buttonMyFeature2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+               this.m_buttonMyFeature2.ForeColor = System.Drawing.Color.Black;
+               this.m_buttonMyFeature2.Image = global::BasicFacebookFeatures.Properties.Resources._6472608_birthday_cake_celebration_festival_party_icon;
+               this.m_buttonMyFeature2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+               this.m_buttonMyFeature2.Location = new System.Drawing.Point(0, 328);
+               this.m_buttonMyFeature2.Name = "m_buttonMyFeature2";
+               this.m_buttonMyFeature2.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+               this.m_buttonMyFeature2.Size = new System.Drawing.Size(269, 42);
+               this.m_buttonMyFeature2.TabIndex = 7;
+               this.m_buttonMyFeature2.Text = "   Birthdays";
+               this.m_buttonMyFeature2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+               this.m_buttonMyFeature2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+               this.m_buttonMyFeature2.UseVisualStyleBackColor = false;
+               this.m_buttonMyFeature2.Click += new System.EventHandler(this.m_buttonMyFeature2_Click);
                // 
                // m_ButtonMyFeature1
                // 
