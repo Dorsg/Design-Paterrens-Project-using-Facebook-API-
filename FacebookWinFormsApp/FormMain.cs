@@ -10,7 +10,7 @@ namespace BasicFacebookFeatures
           private User m_LoggedInUser;
           private LoginResult m_LoginResult;
           private FcbForm m_MainForm;
-          private FormAppSettings m_FormAppSettings;
+          private FormAppSettings m_FormAppSettings = null;
 
           public FormMain()
           {
@@ -43,15 +43,8 @@ namespace BasicFacebookFeatures
                if (!string.IsNullOrEmpty(m_LoginResult.AccessToken))
                {
                     m_LoggedInUser = m_LoginResult.LoggedInUser;
-                    //buttonLogin.Text = $"Logged in as {m_LoginResult.LoggedInUser.Name}";
-                    //buttonLogin.Hide();
-                    //fetchUserInfo();
-                    //loadName();
-
                     m_MainForm = new FcbForm(m_LoggedInUser);
-
                     m_MainForm.ShowDialog();
-
                     m_LoginResult = null;
                }
                else

@@ -14,7 +14,7 @@ namespace BasicFacebookFeatures.Forms
 {
      public partial class DatingForm : Form
      {
-          User m_LoggedInUser;
+          private readonly User m_LoggedInUser;
           public DatingForm(User i_LoggedInUser)
           {
                m_LoggedInUser = i_LoggedInUser;
@@ -88,11 +88,9 @@ namespace BasicFacebookFeatures.Forms
 
           private string calculateAge(DateTime Dob)
           {
-               DateTime Now = DateTime.Now;
-               int Years = new DateTime(DateTime.Now.Subtract(Dob).Ticks).Year - 1;
-               DateTime PastYearDate = Dob.AddYears(Years);
+               int year = new DateTime(DateTime.Now.Subtract(Dob).Ticks).Year - 1;
 
-               return String.Format("Age: {0}", Years);
+               return "Age: " + year;
 
           }
 

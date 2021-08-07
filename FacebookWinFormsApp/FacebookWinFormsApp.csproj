@@ -89,14 +89,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasicFacebookFeatures\Forms\TriviaForm.cs">
+    <Compile Include="Forms\Birthdays.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FcbForm.cs">
+    <Compile Include="FacebookForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FcbForm.Designer.cs">
-      <DependentUpon>FcbForm.cs</DependentUpon>
+    <Compile Include="FacebookForm.Designer.cs">
+      <DependentUpon>FacebookForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAppSettings.cs">
       <SubType>Form</SubType>
@@ -148,11 +148,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BasicFacebookFeatures\Forms\TriviaForm.resx">
-      <DependentUpon>TriviaForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Birthdays.resx">
+      <DependentUpon>Birthdays.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FcbForm.resx">
-      <DependentUpon>FcbForm.cs</DependentUpon>
+    <EmbeddedResource Include="FacebookForm.resx">
+      <DependentUpon>FacebookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAppSettings.resx">
       <DependentUpon>FormAppSettings.cs</DependentUpon>
@@ -274,6 +274,7 @@
   <ItemGroup>
     <None Include="Resources\6472608_birthday_cake_celebration_festival_party_icon.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -13,7 +13,7 @@ namespace BasicFacebookFeatures.Forms
 {
      public partial class AlbumsForm : Form
      {
-          User m_LoggedInUser;
+          private readonly User m_LoggedInUser;
           public AlbumsForm(User i_LoggedInUser)
           {
                m_LoggedInUser = i_LoggedInUser;
