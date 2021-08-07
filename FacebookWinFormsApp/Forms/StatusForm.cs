@@ -11,6 +11,7 @@ namespace BasicFacebookFeatures.Forms
           {
                m_LoggedInUser = i_LoggedInUser;
                InitializeComponent();
+
                fetchPosts();
           }
 
