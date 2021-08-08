@@ -26,16 +26,21 @@ namespace BasicFacebookFeatures.Forms
           {
                m_ListBoxSingles.Items.Clear();
                m_ListBoxSingles.DisplayMember = "Name";
-
-               foreach (User user in m_LoggedInUser.Friends)
+               try
                {
-                    
-                    if (user.Gender != m_LoggedInUser.Gender && 
-                        user.RelationshipStatus == User.eRelationshipStatus.Single)
+                    foreach(User user in m_LoggedInUser.Friends)
                     {
-                         m_ListBoxSingles.Items.Add(user);
+                         if(user.Gender != m_LoggedInUser.Gender
+                            && user.RelationshipStatus == User.eRelationshipStatus.Single)
+                         {
+                              m_ListBoxSingles.Items.Add(user);
+                         }
+
                     }
-                    
+               }
+               catch(Exception ex)
+               {
+                    MessageBox.Show(ex.ToString());
                }
 
                if (m_ListBoxSingles.Items.Count == 0)

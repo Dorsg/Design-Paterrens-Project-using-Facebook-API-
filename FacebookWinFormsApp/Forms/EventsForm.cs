@@ -26,16 +26,24 @@ namespace BasicFacebookFeatures.Forms
         {
             listBoxEvents.Items.Clear();
             listBoxEvents.DisplayMember = "Name";
-            foreach (Event fbEvent in m_LoggedInUser.Events)
+            try
             {
-                listBoxEvents.Items.Add(fbEvent);
+
+                 foreach(Event fbEvent in m_LoggedInUser.Events)
+                 {
+                      listBoxEvents.Items.Add(fbEvent);
+                 }
+            }
+            catch(Exception ex)
+            {
+                 MessageBox.Show(ex.ToString());
             }
 
             if (listBoxEvents.Items.Count == 0)
             {
                 m_LabelEventPic.Text = "no data :(";
                 MessageBox.Show("No events to retrieve :(");
-               }
+            }
         }
 
         private void listBoxEvents_SelectedIndexChanged(object sender, EventArgs e)

@@ -19,20 +19,27 @@ namespace BasicFacebookFeatures.Forms
           {
                m_ListBoxPastPost.Items.Clear();
 
-               foreach (Post post in m_LoggedInUser.Posts)
+               try
                {
-                    if (post.Message != null)
+                    foreach(Post post in m_LoggedInUser.Posts)
                     {
-                         m_ListBoxPastPost.Items.Add(post.Message);
+                         if(post.Message != null)
+                         {
+                              m_ListBoxPastPost.Items.Add(post.Message);
+                         }
+                         else if(post.Caption != null)
+                         {
+                              m_ListBoxPastPost.Items.Add(post.Caption);
+                         }
+                         else
+                         {
+                              m_ListBoxPastPost.Items.Add(string.Format("[{0}]", post.Type));
+                         }
                     }
-                    else if (post.Caption != null)
-                    {
-                         m_ListBoxPastPost.Items.Add(post.Caption);
-                    }
-                    else
-                    {
-                         m_ListBoxPastPost.Items.Add(string.Format("[{0}]", post.Type));
-                    }
+               }
+               catch(Exception ex)
+               {
+                    MessageBox.Show(ex.ToString());
                }
 
                if (m_ListBoxPastPost.Items.Count == 0)

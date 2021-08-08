@@ -31,21 +31,27 @@ namespace BasicFacebookFeatures.Forms
         {
             m_ListBirthdayFriends.Items.Clear();
             m_ListBirthdayFriends.DisplayMember = "Name";
-            //string current_day = DateTime.Today.Day.ToString();
-            //string current_month = DateTime.Today.Month.ToString();
-            string current_day = "26";
-            string current_month = "08";
+            string current_day = DateTime.Today.Day.ToString();
+            string current_month = DateTime.Today.Month.ToString();
+
             string[] words = current_day.Split('/');
             string show = words[0];
 
-            foreach (User user in m_LoggedInUser.Friends)
+            try
             {
-                string birthday = user.Birthday;
-                string[] birthday_parts = birthday.Split('/');
-                if (birthday_parts[1] == current_day && birthday_parts[0] == current_month)
-                {
-                     m_ListBirthdayFriends.Items.Add(user);
-                }
+                 foreach(User user in m_LoggedInUser.Friends)
+                 {
+                      string birthday = user.Birthday;
+                      string[] birthday_parts = birthday.Split('/');
+                      if(birthday_parts[1] == current_day && birthday_parts[0] == current_month)
+                      {
+                           m_ListBirthdayFriends.Items.Add(user);
+                      }
+                 }
+            }
+            catch(Exception ex)
+            {
+                 MessageBox.Show(ex.ToString());
             }
 
             if (m_ListBirthdayFriends.Items.Count == 0)

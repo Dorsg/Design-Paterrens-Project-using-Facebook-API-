@@ -1,7 +1,7 @@
 ﻿
 namespace BasicFacebookFeatures
 {
-     partial class FcbForm
+     partial class FacebbokForm
      {
           /// <summary>
           /// Required designer variable.
@@ -336,7 +336,7 @@ namespace BasicFacebookFeatures
                this.pictureBoxProfile.TabIndex = 0;
                this.pictureBoxProfile.TabStop = false;
                // 
-               // FcbForm
+               // FacebbokForm
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -346,7 +346,7 @@ namespace BasicFacebookFeatures
                this.Controls.Add(this.m_TtilePanel);
                this.Controls.Add(this.m_PanelMenu);
                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-               this.Name = "FcbForm";
+               this.Name = "FacebbokForm";
                this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
                this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
                this.Load += new System.EventHandler(this.FcbForm_Load);

@@ -9,7 +9,7 @@ namespace BasicFacebookFeatures
      {
           private User m_LoggedInUser;
           private LoginResult m_LoginResult;
-          private FcbForm m_MainForm;
+          private FacebbokForm m_MainForm;
           private FormAppSettings m_FormAppSettings;
 
           public FormLogin()
@@ -43,7 +43,7 @@ namespace BasicFacebookFeatures
                if (!string.IsNullOrEmpty(m_LoginResult.AccessToken))
                {
                     m_LoggedInUser = m_LoginResult.LoggedInUser;
-                    m_MainForm = new FcbForm(m_LoggedInUser);
+                    m_MainForm = new FacebbokForm(m_LoggedInUser);
                     m_MainForm.ShowDialog();
                     m_LoginResult = null;
                }

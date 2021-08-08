@@ -1,12 +1,5 @@
 ﻿using FacebookWrapper.ObjectModel;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BasicFacebookFeatures.Forms
@@ -25,10 +18,18 @@ namespace BasicFacebookFeatures.Forms
           {
                m_ListBoxAlbumList.Items.Clear();
                m_ListBoxAlbumList.DisplayMember = "Name";
-               foreach (Album album in m_LoggedInUser.Albums)
+
+               try
                {
-                    m_ListBoxAlbumList.Items.Add(album);
-                    //album.ReFetch(DynamicWrapper.eLoadOptions.Full);
+
+                    foreach(Album album in m_LoggedInUser.Albums)
+                    {
+                         m_ListBoxAlbumList.Items.Add(album);
+                    }
+               }
+               catch(Exception ex)
+               {
+                    MessageBox.Show(ex.ToString());
                }
 
                if (m_ListBoxAlbumList.Items.Count == 0)

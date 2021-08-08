@@ -15,13 +15,13 @@ using System.Runtime.InteropServices;
 
 namespace BasicFacebookFeatures
 {
-     public partial class FcbForm : Form
+     public partial class FacebbokForm : Form
      {
           private readonly User m_LoggedInUser;
 
           private Button m_CurrentButton;
           private Form m_ActiveForm;
-          public FcbForm(User i_LoggedInUser)
+          public FacebbokForm(User i_LoggedInUser)
           {
                InitializeComponent();
                m_LoggedInUser = i_LoggedInUser;
