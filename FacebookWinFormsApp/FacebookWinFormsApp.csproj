@@ -89,7 +89,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Birthdays.cs">
+    <Compile Include="Forms\BirthdaysForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FacebookForm.cs">
@@ -148,8 +148,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Birthdays.resx">
-      <DependentUpon>Birthdays.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\BirthdaysForm.resx">
+      <DependentUpon>BirthdaysForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FacebookForm.resx">
       <DependentUpon>FacebookForm.cs</DependentUpon>
