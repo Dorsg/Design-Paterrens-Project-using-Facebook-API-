@@ -89,6 +89,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppSettings.cs" />
     <Compile Include="Forms\BirthdaysForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,18 +98,6 @@
     </Compile>
     <Compile Include="FacebookForm.Designer.cs">
       <DependentUpon>FacebookForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormAppSettings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAppSettings.designer.cs">
-      <DependentUpon>FormAppSettings.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AlbumsForm.cs">
       <SubType>Form</SubType>
@@ -154,12 +143,6 @@
     <EmbeddedResource Include="FacebookForm.resx">
       <DependentUpon>FacebookForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAppSettings.resx">
-      <DependentUpon>FormAppSettings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AlbumsForm.resx">
       <DependentUpon>AlbumsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +172,10 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\FacebookWrapper.ObjectModel.Album.datasource" />
+    <None Include="Properties\DataSources\FacebookWrapper.ObjectModel.Event.datasource" />
+    <None Include="Properties\DataSources\FacebookWrapper.ObjectModel.Page.datasource" />
+    <None Include="Properties\DataSources\FacebookWrapper.ObjectModel.Post.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -274,7 +261,9 @@
   <ItemGroup>
     <None Include="Resources\6472608_birthday_cake_celebration_festival_party_icon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

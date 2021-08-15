@@ -24,35 +24,44 @@ namespace BasicFacebookFeatures.Forms
 
         private void fetchLikedPages()
         {
-            listBoxPages.Items.Clear();
-            listBoxPages.DisplayMember = "Name";
 
-            try
-            {
-                 foreach(Page page in m_LoggedInUser.LikedPages)
-                 {
-                      listBoxPages.Items.Add(page);
-                 }
-            }
-            catch(Exception ex)
-            {
-                 MessageBox.Show(ex.Message);
-            }
+            // if (m_LoggedInUser.Events.Count != 0)
+             {
+                  pageBindingSource.DataSource = m_LoggedInUser.LikedPages;
+             }
+             //else
+             //{
+             //     MessageBox.Show("no page to show");
+             //}
+               //listBoxPages.Items.Clear();
+               //listBoxPages.DisplayMember = "Name";
 
-            if (listBoxPages.Items.Count == 0)
-            {
-                m_labelPagesPic.Text = "no data :(";
-                MessageBox.Show("No pages to retrieve :(");
+               //try
+               //{
+               //     foreach(Page page in m_LoggedInUser.LikedPages)
+               //     {
+               //          listBoxPages.Items.Add(page);
+               //     }
+               //}
+               //catch(Exception ex)
+               //{
+               //     MessageBox.Show(ex.Message);
+               //}
 
-            }
-        }
-        private void listBoxPages_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listBoxPages.SelectedItems.Count == 1)
-            {
-                Page selectedPage = listBoxPages.SelectedItem as Page;
-                m_PictureBoxPages.LoadAsync(selectedPage.PictureNormalURL);
-            }
-        }
+               //if (listBoxPages.Items.Count == 0)
+               //{
+               //    m_labelPagesPic.Text = "no data :(";
+               //    MessageBox.Show("No pages to retrieve :(");
+
+               //}
+          }
+        //private void listBoxPages_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (listBoxPages.SelectedItems.Count == 1)
+        //    {
+        //        Page selectedPage = listBoxPages.SelectedItem as Page;
+        //        m_PictureBoxPages.LoadAsync(selectedPage.PictureNormalURL);
+        //    }
+        //}
     }
 }

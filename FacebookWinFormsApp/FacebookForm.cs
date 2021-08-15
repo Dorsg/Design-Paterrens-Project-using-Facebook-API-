@@ -17,15 +17,18 @@ namespace BasicFacebookFeatures
 {
      public partial class FacebbokForm : Form
      {
-          private readonly User m_LoggedInUser;
-
+          private User m_LoggedInUser;
+          private AppSettings m_AppSettings = new AppSettings();
           private Button m_CurrentButton;
           private Form m_ActiveForm;
-          public FacebbokForm(User i_LoggedInUser)
+          private LoginResult m_LoginResult;
+          public FacebbokForm()
           {
                InitializeComponent();
-               m_LoggedInUser = i_LoggedInUser;
-               fetchUserInfo();
+               m_AppSettings = AppSettings.LoadFromFile();
+
+               this.m_CheckBoxRemmberMe.Checked = m_AppSettings.m_RememberUser;
+
           }
 
           [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -33,7 +36,7 @@ namespace BasicFacebookFeatures
           [DllImport("user32.DLL", EntryPoint = "SendMessage")]
           private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-          private void FcbForm_Load(object sender, EventArgs e){}
+          private void FcbForm_Load(object sender, EventArgs e) { }
           private void fetchUserInfo()
           {
                m_LabelTitle.Text = "Facebook";
@@ -56,13 +59,13 @@ namespace BasicFacebookFeatures
                          m_CurrentButton = (Button)btnSender;
                          m_CurrentButton.BackColor = color;
                          m_CurrentButton.ForeColor = Color.Black;
-                         
+
                          m_CurrentButton.Font = new System.Drawing.Font("Microsoft Sans Serif",
                               11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point,
                               ((byte)(0)));
                     }
                }
-               
+
           }
           private void disableButton()
           {
@@ -112,7 +115,7 @@ namespace BasicFacebookFeatures
           }
           private void m_ButtonEvents_Click(object sender, EventArgs e)
           {
-              openChildForm(new Forms.EventsForm(m_LoggedInUser), sender);
+               openChildForm(new Forms.EventsForm(m_LoggedInUser), sender);
           }
           private void m_ButtonMyFeature1_Click(object sender, EventArgs e)
           {
@@ -125,7 +128,7 @@ namespace BasicFacebookFeatures
           private void m_ButtonLogout_Click(object sender, EventArgs e)
           {
                FacebookService.LogoutWithUI();
-               this.Close();
+               m_ButtonLogIn.Text = "Login";
           }
           private void m_TtilePanel_MouseDown(object sender, MouseEventArgs e)
           {
@@ -136,6 +139,59 @@ namespace BasicFacebookFeatures
           {
                ReleaseCapture();
                SendMessage(this.Handle, 0x112, 0xf012, 0);
+          }
+
+          private void m_ButtonLogIn_Click(object sender, EventArgs e)
+          {
+
+               if (m_AppSettings.m_RememberUser && !string.IsNullOrEmpty(m_AppSettings.m_LastAccessToken))
+               {
+                    m_LoginResult = FacebookService.Connect(m_AppSettings.m_LastAccessToken);
+                    m_AppSettings.SaveToFile();
+               }
+               else
+               {
+                    m_LoginResult = FacebookService.Login(
+                    /// (This is Desig Patter's App ID. replace it with your own)
+                    "2932466203680140",
+                    /// requested permissions:
+                    "email",
+                         "public_profile",
+                         "user_age_range",
+                         "user_birthday",
+                         "user_events",
+                         "user_friends",
+                         "user_gender",
+                         "user_hometown",
+                         "user_likes",
+                         "user_link",
+                         "user_location",
+                         "user_photos",
+                         "user_posts",
+                         "user_videos");
+
+                    m_AppSettings.m_LastAccessToken = null;
+
+
+
+               }
+
+               if (!string.IsNullOrEmpty(m_LoginResult.AccessToken))
+               {
+                    m_AppSettings.m_LastAccessToken = m_LoginResult.AccessToken;
+                    m_LoggedInUser = m_LoginResult.LoggedInUser;
+                    m_ButtonLogIn.Text = "Logged in";
+                    fetchUserInfo();
+               }
+               else
+               {
+                    MessageBox.Show(m_LoginResult.ErrorMessage, "Login Failed");
+               }
+          }
+
+          private void m_CheckBoxRemmberMe_CheckedChanged(object sender, EventArgs e)
+          {
+               m_AppSettings.m_RememberUser = m_CheckBoxRemmberMe.Checked;
           }
      }
 }

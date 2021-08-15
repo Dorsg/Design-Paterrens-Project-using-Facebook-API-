@@ -16,47 +16,28 @@ namespace BasicFacebookFeatures.Forms
 
           private void fetchAlbums()
           {
-               m_ListBoxAlbumList.Items.Clear();
-               m_ListBoxAlbumList.DisplayMember = "Name";
-
-               try
-               {
-
-                    foreach(Album album in m_LoggedInUser.Albums)
-                    {
-                         m_ListBoxAlbumList.Items.Add(album);
-                    }
-               }
-               catch(Exception ex)
-               {
-                    MessageBox.Show(ex.ToString());
-               }
-
-               if (m_ListBoxAlbumList.Items.Count == 0)
-               {
-                    MessageBox.Show("No Albums to retrieve :(");
-               }
+               albumBindingSource.DataSource = m_LoggedInUser.Albums;
           }
 
-          private void displaySelectedAlbum()
-          {
-               if (m_ListBoxAlbumList.SelectedItems.Count == 1)
-               {
-                    Album selectedAlbum = m_ListBoxAlbumList.SelectedItem as Album;
-                    if (selectedAlbum.PictureAlbumURL != null)
-                    {
-                         m_PictureBox.LoadAsync(selectedAlbum.PictureAlbumURL);
-                    }
-                    else
-                    {
-                        // m_PictureBox.Image = pictureBoxProfile.ErrorImage;
-                    }
-               }
-          }
+          //private void displaySelectedAlbum()
+          //{
+          //     if (m_ListBoxAlbumList.SelectedItems.Count == 1)
+          //     {
+          //          Album selectedAlbum = m_ListBoxAlbumList.SelectedItem as Album;
+          //          if (selectedAlbum.PictureAlbumURL != null)
+          //          {
+          //               m_PictureBox.LoadAsync(selectedAlbum.PictureAlbumURL);
+          //          }
+          //          else
+          //          {
+          //              // m_PictureBox.Image = pictureBoxProfile.ErrorImage;
+          //          }
+          //     }
+          //}
 
-          private void m_ListBoxAlbumList_SelectedIndexChanged(object sender, EventArgs e)
-          {
-               displaySelectedAlbum();
-          }
+          //private void m_ListBoxAlbumList_SelectedIndexChanged(object sender, EventArgs e)
+          //{
+          //     displaySelectedAlbum();
+          //}
      }
 }

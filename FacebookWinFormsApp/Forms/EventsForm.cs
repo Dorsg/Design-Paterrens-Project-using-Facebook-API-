@@ -24,36 +24,26 @@ namespace BasicFacebookFeatures.Forms
 
         private void fetchEvents()
         {
-            listBoxEvents.Items.Clear();
-            listBoxEvents.DisplayMember = "Name";
-            try
-            {
 
-                 foreach(Event fbEvent in m_LoggedInUser.Events)
-                 {
-                      listBoxEvents.Items.Add(fbEvent);
-                 }
-            }
-            catch(Exception ex)
+            if (m_LoggedInUser.Events.Count != 0) 
             {
-                 MessageBox.Show(ex.ToString());
+                  eventBindingSource.DataSource = m_LoggedInUser.Events;
             }
-
-            if (listBoxEvents.Items.Count == 0)
+            else
             {
-                m_LabelEventPic.Text = "no data :(";
-                MessageBox.Show("No events to retrieve :(");
+                 MessageBox.Show("no event to show");
             }
+             
         }
 
-        private void listBoxEvents_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listBoxEvents.SelectedItems.Count == 1)
-            {
-                Event selectedEvent = listBoxEvents.SelectedItem as Event;
-                m_EventBox.LoadAsync(selectedEvent.Cover.SourceURL);
-            }
-        }
+        //private void listBoxEvents_SelectedIndexChanged(object sender, EventArgs e)
+               //{
+               //    if (listBoxEvents.SelectedItems.Count == 1)
+               //    {
+               //        Event selectedEvent = listBoxEvents.SelectedItem as Event;
+               //        m_EventBox.LoadAsync(selectedEvent.Cover.SourceURL);
+               //    }
+               //}
 
-    }
+          }
 }

@@ -17,35 +17,40 @@ namespace BasicFacebookFeatures.Forms
 
           private void fetchPosts()
           {
-               m_ListBoxPastPost.Items.Clear();
 
-               try
-               {
-                    foreach(Post post in m_LoggedInUser.Posts)
-                    {
-                         if(post.Message != null)
-                         {
-                              m_ListBoxPastPost.Items.Add(post.Message);
-                         }
-                         else if(post.Caption != null)
-                         {
-                              m_ListBoxPastPost.Items.Add(post.Caption);
-                         }
-                         else
-                         {
-                              m_ListBoxPastPost.Items.Add(string.Format("[{0}]", post.Type));
-                         }
-                    }
-               }
-               catch(Exception ex)
-               {
-                    MessageBox.Show(ex.ToString());
-               }
+               postBindingSource.DataSource = m_LoggedInUser.Posts;
 
-               if (m_ListBoxPastPost.Items.Count == 0)
-               {
-                    MessageBox.Show("No Posts to retrieve :(");
-               }
+
+
+               //     m_ListBoxPastPost.Items.Clear();
+
+               //     try
+               //     {
+               //          foreach(Post post in m_LoggedInUser.Posts)
+               //          {
+               //               if(post.Message != null)
+               //               {
+               //                    m_ListBoxPastPost.Items.Add(post.Message);
+               //               }
+               //               else if(post.Caption != null)
+               //               {
+               //                    m_ListBoxPastPost.Items.Add(post.Caption);
+               //               }
+               //               else
+               //               {
+               //                    m_ListBoxPastPost.Items.Add(string.Format("[{0}]", post.Type));
+               //               }
+               //          }
+               //     }
+               //     catch(Exception ex)
+               //     {
+               //          MessageBox.Show(ex.ToString());
+               //     }
+
+               //     if (m_ListBoxPastPost.Items.Count == 0)
+               //     {
+               //          MessageBox.Show("No Posts to retrieve :(");
+               //     }
           }
 
           private void m_ButtonPost_Click(object sender, EventArgs e)
