@@ -40,17 +40,17 @@ namespace BasicFacebookFeatures.Forms
                System.Windows.Forms.Label nameLabel;
                this.m_LabelpagesList = new System.Windows.Forms.Label();
                this.listBoxPages = new System.Windows.Forms.ListBox();
-               this.panel1 = new System.Windows.Forms.Panel();
                this.pageBindingSource = new System.Windows.Forms.BindingSource(this.components);
+               this.panel1 = new System.Windows.Forms.Panel();
+               this.nameLabel1 = new System.Windows.Forms.Label();
+               this.websiteLinkLabel = new System.Windows.Forms.LinkLabel();
+               this.phoneLabel2 = new System.Windows.Forms.Label();
+               this.uRLLinkLabel = new System.Windows.Forms.LinkLabel();
                this.descriptionTextBox = new System.Windows.Forms.TextBox();
                this.imageNormalPictureBox = new System.Windows.Forms.PictureBox();
                this.isPublishedLabel1 = new System.Windows.Forms.Label();
                this.likesCountLabel1 = new System.Windows.Forms.Label();
                this.talkingAboutCountLabel1 = new System.Windows.Forms.Label();
-               this.uRLLinkLabel = new System.Windows.Forms.LinkLabel();
-               this.phoneLabel2 = new System.Windows.Forms.Label();
-               this.websiteLinkLabel = new System.Windows.Forms.LinkLabel();
-               this.nameLabel1 = new System.Windows.Forms.Label();
                descriptionLabel = new System.Windows.Forms.Label();
                isPublishedLabel = new System.Windows.Forms.Label();
                likesCountLabel = new System.Windows.Forms.Label();
@@ -59,10 +59,82 @@ namespace BasicFacebookFeatures.Forms
                phoneLabel1 = new System.Windows.Forms.Label();
                websiteLabel1 = new System.Windows.Forms.Label();
                nameLabel = new System.Windows.Forms.Label();
-               this.panel1.SuspendLayout();
                ((System.ComponentModel.ISupportInitialize)(this.pageBindingSource)).BeginInit();
+               this.panel1.SuspendLayout();
                ((System.ComponentModel.ISupportInitialize)(this.imageNormalPictureBox)).BeginInit();
                this.SuspendLayout();
+               // 
+               // descriptionLabel
+               // 
+               descriptionLabel.AutoSize = true;
+               descriptionLabel.Location = new System.Drawing.Point(10, 69);
+               descriptionLabel.Name = "descriptionLabel";
+               descriptionLabel.Size = new System.Drawing.Size(63, 13);
+               descriptionLabel.TabIndex = 0;
+               descriptionLabel.Text = "Description:";
+               // 
+               // isPublishedLabel
+               // 
+               isPublishedLabel.AutoSize = true;
+               isPublishedLabel.Location = new System.Drawing.Point(10, 130);
+               isPublishedLabel.Name = "isPublishedLabel";
+               isPublishedLabel.Size = new System.Drawing.Size(67, 13);
+               isPublishedLabel.TabIndex = 4;
+               isPublishedLabel.Text = "Is Published:";
+               // 
+               // likesCountLabel
+               // 
+               likesCountLabel.AutoSize = true;
+               likesCountLabel.Location = new System.Drawing.Point(10, 151);
+               likesCountLabel.Name = "likesCountLabel";
+               likesCountLabel.Size = new System.Drawing.Size(66, 13);
+               likesCountLabel.TabIndex = 6;
+               likesCountLabel.Text = "Likes Count:";
+               // 
+               // talkingAboutCountLabel
+               // 
+               talkingAboutCountLabel.AutoSize = true;
+               talkingAboutCountLabel.Location = new System.Drawing.Point(10, 196);
+               talkingAboutCountLabel.Name = "talkingAboutCountLabel";
+               talkingAboutCountLabel.Size = new System.Drawing.Size(107, 13);
+               talkingAboutCountLabel.TabIndex = 12;
+               talkingAboutCountLabel.Text = "Talking About Count:";
+               // 
+               // uRLLabel1
+               // 
+               uRLLabel1.AutoSize = true;
+               uRLLabel1.Location = new System.Drawing.Point(10, 221);
+               uRLLabel1.Name = "uRLLabel1";
+               uRLLabel1.Size = new System.Drawing.Size(32, 13);
+               uRLLabel1.TabIndex = 17;
+               uRLLabel1.Text = "URL:";
+               // 
+               // phoneLabel1
+               // 
+               phoneLabel1.AutoSize = true;
+               phoneLabel1.Location = new System.Drawing.Point(10, 172);
+               phoneLabel1.Name = "phoneLabel1";
+               phoneLabel1.Size = new System.Drawing.Size(41, 13);
+               phoneLabel1.TabIndex = 18;
+               phoneLabel1.Text = "Phone:";
+               // 
+               // websiteLabel1
+               // 
+               websiteLabel1.AutoSize = true;
+               websiteLabel1.Location = new System.Drawing.Point(10, 244);
+               websiteLabel1.Name = "websiteLabel1";
+               websiteLabel1.Size = new System.Drawing.Size(49, 13);
+               websiteLabel1.TabIndex = 19;
+               websiteLabel1.Text = "Website:";
+               // 
+               // nameLabel
+               // 
+               nameLabel.AutoSize = true;
+               nameLabel.Location = new System.Drawing.Point(119, 18);
+               nameLabel.Name = "nameLabel";
+               nameLabel.Size = new System.Drawing.Size(38, 13);
+               nameLabel.TabIndex = 20;
+               nameLabel.Text = "Name:";
                // 
                // m_LabelpagesList
                // 
@@ -83,6 +155,10 @@ namespace BasicFacebookFeatures.Forms
                this.listBoxPages.Name = "listBoxPages";
                this.listBoxPages.Size = new System.Drawing.Size(235, 277);
                this.listBoxPages.TabIndex = 6;
+               // 
+               // pageBindingSource
+               // 
+               this.pageBindingSource.DataSource = typeof(FacebookWrapper.ObjectModel.Page);
                // 
                // panel1
                // 
@@ -108,18 +184,43 @@ namespace BasicFacebookFeatures.Forms
                this.panel1.Size = new System.Drawing.Size(268, 277);
                this.panel1.TabIndex = 8;
                // 
-               // pageBindingSource
+               // nameLabel1
                // 
-               this.pageBindingSource.DataSource = typeof(FacebookWrapper.ObjectModel.Page);
+               this.nameLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pageBindingSource, "Name", true));
+               this.nameLabel1.Location = new System.Drawing.Point(163, 18);
+               this.nameLabel1.Name = "nameLabel1";
+               this.nameLabel1.Size = new System.Drawing.Size(100, 23);
+               this.nameLabel1.TabIndex = 21;
+               this.nameLabel1.Text = "label1";
                // 
-               // descriptionLabel
+               // websiteLinkLabel
                // 
-               descriptionLabel.AutoSize = true;
-               descriptionLabel.Location = new System.Drawing.Point(10, 69);
-               descriptionLabel.Name = "descriptionLabel";
-               descriptionLabel.Size = new System.Drawing.Size(63, 13);
-               descriptionLabel.TabIndex = 0;
-               descriptionLabel.Text = "Description:";
+               this.websiteLinkLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pageBindingSource, "Website", true));
+               this.websiteLinkLabel.Location = new System.Drawing.Point(65, 244);
+               this.websiteLinkLabel.Name = "websiteLinkLabel";
+               this.websiteLinkLabel.Size = new System.Drawing.Size(100, 23);
+               this.websiteLinkLabel.TabIndex = 20;
+               this.websiteLinkLabel.TabStop = true;
+               this.websiteLinkLabel.Text = "linkLabel1";
+               // 
+               // phoneLabel2
+               // 
+               this.phoneLabel2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pageBindingSource, "Phone", true));
+               this.phoneLabel2.Location = new System.Drawing.Point(57, 172);
+               this.phoneLabel2.Name = "phoneLabel2";
+               this.phoneLabel2.Size = new System.Drawing.Size(100, 23);
+               this.phoneLabel2.TabIndex = 19;
+               this.phoneLabel2.Text = "label1";
+               // 
+               // uRLLinkLabel
+               // 
+               this.uRLLinkLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pageBindingSource, "URL", true));
+               this.uRLLinkLabel.Location = new System.Drawing.Point(65, 221);
+               this.uRLLinkLabel.Name = "uRLLinkLabel";
+               this.uRLLinkLabel.Size = new System.Drawing.Size(100, 23);
+               this.uRLLinkLabel.TabIndex = 18;
+               this.uRLLinkLabel.TabStop = true;
+               this.uRLLinkLabel.Text = "linkLabel1";
                // 
                // descriptionTextBox
                // 
@@ -140,15 +241,6 @@ namespace BasicFacebookFeatures.Forms
                this.imageNormalPictureBox.TabIndex = 3;
                this.imageNormalPictureBox.TabStop = false;
                // 
-               // isPublishedLabel
-               // 
-               isPublishedLabel.AutoSize = true;
-               isPublishedLabel.Location = new System.Drawing.Point(10, 130);
-               isPublishedLabel.Name = "isPublishedLabel";
-               isPublishedLabel.Size = new System.Drawing.Size(67, 13);
-               isPublishedLabel.TabIndex = 4;
-               isPublishedLabel.Text = "Is Published:";
-               // 
                // isPublishedLabel1
                // 
                this.isPublishedLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pageBindingSource, "IsPublished", true));
@@ -157,15 +249,6 @@ namespace BasicFacebookFeatures.Forms
                this.isPublishedLabel1.Size = new System.Drawing.Size(100, 23);
                this.isPublishedLabel1.TabIndex = 5;
                this.isPublishedLabel1.Text = "label1";
-               // 
-               // likesCountLabel
-               // 
-               likesCountLabel.AutoSize = true;
-               likesCountLabel.Location = new System.Drawing.Point(10, 151);
-               likesCountLabel.Name = "likesCountLabel";
-               likesCountLabel.Size = new System.Drawing.Size(66, 13);
-               likesCountLabel.TabIndex = 6;
-               likesCountLabel.Text = "Likes Count:";
                // 
                // likesCountLabel1
                // 
@@ -176,15 +259,6 @@ namespace BasicFacebookFeatures.Forms
                this.likesCountLabel1.TabIndex = 7;
                this.likesCountLabel1.Text = "label1";
                // 
-               // talkingAboutCountLabel
-               // 
-               talkingAboutCountLabel.AutoSize = true;
-               talkingAboutCountLabel.Location = new System.Drawing.Point(10, 196);
-               talkingAboutCountLabel.Name = "talkingAboutCountLabel";
-               talkingAboutCountLabel.Size = new System.Drawing.Size(107, 13);
-               talkingAboutCountLabel.TabIndex = 12;
-               talkingAboutCountLabel.Text = "Talking About Count:";
-               // 
                // talkingAboutCountLabel1
                // 
                this.talkingAboutCountLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pageBindingSource, "TalkingAboutCount", true));
@@ -193,80 +267,6 @@ namespace BasicFacebookFeatures.Forms
                this.talkingAboutCountLabel1.Size = new System.Drawing.Size(100, 23);
                this.talkingAboutCountLabel1.TabIndex = 13;
                this.talkingAboutCountLabel1.Text = "label1";
-               // 
-               // uRLLabel1
-               // 
-               uRLLabel1.AutoSize = true;
-               uRLLabel1.Location = new System.Drawing.Point(10, 221);
-               uRLLabel1.Name = "uRLLabel1";
-               uRLLabel1.Size = new System.Drawing.Size(32, 13);
-               uRLLabel1.TabIndex = 17;
-               uRLLabel1.Text = "URL:";
-               // 
-               // uRLLinkLabel
-               // 
-               this.uRLLinkLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pageBindingSource, "URL", true));
-               this.uRLLinkLabel.Location = new System.Drawing.Point(65, 221);
-               this.uRLLinkLabel.Name = "uRLLinkLabel";
-               this.uRLLinkLabel.Size = new System.Drawing.Size(100, 23);
-               this.uRLLinkLabel.TabIndex = 18;
-               this.uRLLinkLabel.TabStop = true;
-               this.uRLLinkLabel.Text = "linkLabel1";
-               // 
-               // phoneLabel1
-               // 
-               phoneLabel1.AutoSize = true;
-               phoneLabel1.Location = new System.Drawing.Point(10, 172);
-               phoneLabel1.Name = "phoneLabel1";
-               phoneLabel1.Size = new System.Drawing.Size(41, 13);
-               phoneLabel1.TabIndex = 18;
-               phoneLabel1.Text = "Phone:";
-               // 
-               // phoneLabel2
-               // 
-               this.phoneLabel2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pageBindingSource, "Phone", true));
-               this.phoneLabel2.Location = new System.Drawing.Point(57, 172);
-               this.phoneLabel2.Name = "phoneLabel2";
-               this.phoneLabel2.Size = new System.Drawing.Size(100, 23);
-               this.phoneLabel2.TabIndex = 19;
-               this.phoneLabel2.Text = "label1";
-               // 
-               // websiteLabel1
-               // 
-               websiteLabel1.AutoSize = true;
-               websiteLabel1.Location = new System.Drawing.Point(10, 244);
-               websiteLabel1.Name = "websiteLabel1";
-               websiteLabel1.Size = new System.Drawing.Size(49, 13);
-               websiteLabel1.TabIndex = 19;
-               websiteLabel1.Text = "Website:";
-               // 
-               // websiteLinkLabel
-               // 
-               this.websiteLinkLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pageBindingSource, "Website", true));
-               this.websiteLinkLabel.Location = new System.Drawing.Point(65, 244);
-               this.websiteLinkLabel.Name = "websiteLinkLabel";
-               this.websiteLinkLabel.Size = new System.Drawing.Size(100, 23);
-               this.websiteLinkLabel.TabIndex = 20;
-               this.websiteLinkLabel.TabStop = true;
-               this.websiteLinkLabel.Text = "linkLabel1";
-               // 
-               // nameLabel
-               // 
-               nameLabel.AutoSize = true;
-               nameLabel.Location = new System.Drawing.Point(119, 18);
-               nameLabel.Name = "nameLabel";
-               nameLabel.Size = new System.Drawing.Size(38, 13);
-               nameLabel.TabIndex = 20;
-               nameLabel.Text = "Name:";
-               // 
-               // nameLabel1
-               // 
-               this.nameLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pageBindingSource, "Name", true));
-               this.nameLabel1.Location = new System.Drawing.Point(163, 18);
-               this.nameLabel1.Name = "nameLabel1";
-               this.nameLabel1.Size = new System.Drawing.Size(100, 23);
-               this.nameLabel1.TabIndex = 21;
-               this.nameLabel1.Text = "label1";
                // 
                // PagesForm
                // 
@@ -279,9 +279,9 @@ namespace BasicFacebookFeatures.Forms
                this.Controls.Add(this.listBoxPages);
                this.Name = "PagesForm";
                this.Text = "Pages";
+               ((System.ComponentModel.ISupportInitialize)(this.pageBindingSource)).EndInit();
                this.panel1.ResumeLayout(false);
                this.panel1.PerformLayout();
-               ((System.ComponentModel.ISupportInitialize)(this.pageBindingSource)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.imageNormalPictureBox)).EndInit();
                this.ResumeLayout(false);
                this.PerformLayout();

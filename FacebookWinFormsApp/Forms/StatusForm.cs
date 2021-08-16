@@ -11,48 +11,24 @@ namespace BasicFacebookFeatures.Forms
           {
                m_LoggedInUser = i_LoggedInUser;
                InitializeComponent();
-
                fetchPosts();
           }
-
           private void fetchPosts()
           {
+               try
+               {
+                    postBindingSource.DataSource = m_LoggedInUser.Posts;
+               }
+               catch (Exception ex)
+               {
+                    MessageBox.Show(ex.Message);
+               }
 
-               postBindingSource.DataSource = m_LoggedInUser.Posts;
-
-
-
-               //     m_ListBoxPastPost.Items.Clear();
-
-               //     try
-               //     {
-               //          foreach(Post post in m_LoggedInUser.Posts)
-               //          {
-               //               if(post.Message != null)
-               //               {
-               //                    m_ListBoxPastPost.Items.Add(post.Message);
-               //               }
-               //               else if(post.Caption != null)
-               //               {
-               //                    m_ListBoxPastPost.Items.Add(post.Caption);
-               //               }
-               //               else
-               //               {
-               //                    m_ListBoxPastPost.Items.Add(string.Format("[{0}]", post.Type));
-               //               }
-               //          }
-               //     }
-               //     catch(Exception ex)
-               //     {
-               //          MessageBox.Show(ex.ToString());
-               //     }
-
-               //     if (m_ListBoxPastPost.Items.Count == 0)
-               //     {
-               //          MessageBox.Show("No Posts to retrieve :(");
-               //     }
+               if (m_LoggedInUser.Posts.Count == 0)
+               {
+                    MessageBox.Show("No posts to retrieve :( ");
+               }
           }
-
           private void m_ButtonPost_Click(object sender, EventArgs e)
           {
                try
@@ -65,6 +41,5 @@ namespace BasicFacebookFeatures.Forms
                     MessageBox.Show(ex.ToString());
                }
           }
-
      }
 }

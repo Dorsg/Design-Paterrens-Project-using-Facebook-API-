@@ -30,50 +30,104 @@ namespace BasicFacebookFeatures.Forms
           private void InitializeComponent()
           {
                this.components = new System.ComponentModel.Container();
-               System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatusForm));
                System.Windows.Forms.Label captionLabel;
                System.Windows.Forms.Label createdTimeLabel;
                System.Windows.Forms.Label descriptionLabel;
                System.Windows.Forms.Label linkLabel;
                System.Windows.Forms.Label messageLabel;
                System.Windows.Forms.Label nameLabel;
+               System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatusForm));
                this.m_LabelWritePost = new System.Windows.Forms.Label();
                this.m_TextBoxPost = new System.Windows.Forms.TextBox();
                this.m_ButtonPost = new System.Windows.Forms.Button();
                this.m_ListBoxPastPost = new System.Windows.Forms.ListBox();
+               this.postBindingSource = new System.Windows.Forms.BindingSource(this.components);
                this.m_LabelPastPost = new System.Windows.Forms.Label();
                this.panel1 = new System.Windows.Forms.Panel();
-               this.postBindingSource = new System.Windows.Forms.BindingSource(this.components);
-               this.postBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-               this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-               this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-               this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-               this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-               this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-               this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-               this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-               this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-               this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-               this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-               this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-               this.postBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
                this.captionLabel1 = new System.Windows.Forms.Label();
                this.createdTimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
                this.descriptionTextBox = new System.Windows.Forms.TextBox();
                this.linkLinkLabel = new System.Windows.Forms.LinkLabel();
                this.messageLabel1 = new System.Windows.Forms.Label();
                this.nameLabel1 = new System.Windows.Forms.Label();
+               this.postBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+               this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+               this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+               this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+               this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+               this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+               this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+               this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+               this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+               this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+               this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+               this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+               this.postBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
                captionLabel = new System.Windows.Forms.Label();
                createdTimeLabel = new System.Windows.Forms.Label();
                descriptionLabel = new System.Windows.Forms.Label();
                linkLabel = new System.Windows.Forms.Label();
                messageLabel = new System.Windows.Forms.Label();
                nameLabel = new System.Windows.Forms.Label();
-               this.panel1.SuspendLayout();
                ((System.ComponentModel.ISupportInitialize)(this.postBindingSource)).BeginInit();
+               this.panel1.SuspendLayout();
                ((System.ComponentModel.ISupportInitialize)(this.postBindingNavigator)).BeginInit();
                this.postBindingNavigator.SuspendLayout();
                this.SuspendLayout();
+               // 
+               // captionLabel
+               // 
+               captionLabel.AutoSize = true;
+               captionLabel.Location = new System.Drawing.Point(3, 11);
+               captionLabel.Name = "captionLabel";
+               captionLabel.Size = new System.Drawing.Size(46, 13);
+               captionLabel.TabIndex = 0;
+               captionLabel.Text = "Caption:";
+               // 
+               // createdTimeLabel
+               // 
+               createdTimeLabel.AutoSize = true;
+               createdTimeLabel.Location = new System.Drawing.Point(3, 41);
+               createdTimeLabel.Name = "createdTimeLabel";
+               createdTimeLabel.Size = new System.Drawing.Size(73, 13);
+               createdTimeLabel.TabIndex = 2;
+               createdTimeLabel.Text = "Created Time:";
+               // 
+               // descriptionLabel
+               // 
+               descriptionLabel.AutoSize = true;
+               descriptionLabel.Location = new System.Drawing.Point(3, 66);
+               descriptionLabel.Name = "descriptionLabel";
+               descriptionLabel.Size = new System.Drawing.Size(63, 13);
+               descriptionLabel.TabIndex = 4;
+               descriptionLabel.Text = "Description:";
+               // 
+               // linkLabel
+               // 
+               linkLabel.AutoSize = true;
+               linkLabel.Location = new System.Drawing.Point(3, 126);
+               linkLabel.Name = "linkLabel";
+               linkLabel.Size = new System.Drawing.Size(30, 13);
+               linkLabel.TabIndex = 8;
+               linkLabel.Text = "Link:";
+               // 
+               // messageLabel
+               // 
+               messageLabel.AutoSize = true;
+               messageLabel.Location = new System.Drawing.Point(3, 149);
+               messageLabel.Name = "messageLabel";
+               messageLabel.Size = new System.Drawing.Size(53, 13);
+               messageLabel.TabIndex = 10;
+               messageLabel.Text = "Message:";
+               // 
+               // nameLabel
+               // 
+               nameLabel.AutoSize = true;
+               nameLabel.Location = new System.Drawing.Point(3, 172);
+               nameLabel.Name = "nameLabel";
+               nameLabel.Size = new System.Drawing.Size(38, 13);
+               nameLabel.TabIndex = 12;
+               nameLabel.Text = "Name:";
                // 
                // m_LabelWritePost
                // 
@@ -114,6 +168,10 @@ namespace BasicFacebookFeatures.Forms
                this.m_ListBoxPastPost.Size = new System.Drawing.Size(297, 199);
                this.m_ListBoxPastPost.TabIndex = 3;
                // 
+               // postBindingSource
+               // 
+               this.postBindingSource.DataSource = typeof(FacebookWrapper.ObjectModel.Post);
+               // 
                // m_LabelPastPost
                // 
                this.m_LabelPastPost.AutoSize = true;
@@ -144,9 +202,59 @@ namespace BasicFacebookFeatures.Forms
                this.panel1.Size = new System.Drawing.Size(370, 199);
                this.panel1.TabIndex = 5;
                // 
-               // postBindingSource
+               // captionLabel1
                // 
-               this.postBindingSource.DataSource = typeof(FacebookWrapper.ObjectModel.Post);
+               this.captionLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.postBindingSource, "Caption", true));
+               this.captionLabel1.Location = new System.Drawing.Point(82, 11);
+               this.captionLabel1.Name = "captionLabel1";
+               this.captionLabel1.Size = new System.Drawing.Size(200, 23);
+               this.captionLabel1.TabIndex = 1;
+               this.captionLabel1.Text = "label1";
+               // 
+               // createdTimeDateTimePicker
+               // 
+               this.createdTimeDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.postBindingSource, "CreatedTime", true));
+               this.createdTimeDateTimePicker.Location = new System.Drawing.Point(82, 37);
+               this.createdTimeDateTimePicker.Name = "createdTimeDateTimePicker";
+               this.createdTimeDateTimePicker.Size = new System.Drawing.Size(200, 20);
+               this.createdTimeDateTimePicker.TabIndex = 3;
+               // 
+               // descriptionTextBox
+               // 
+               this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.postBindingSource, "Description", true));
+               this.descriptionTextBox.Location = new System.Drawing.Point(82, 63);
+               this.descriptionTextBox.Multiline = true;
+               this.descriptionTextBox.Name = "descriptionTextBox";
+               this.descriptionTextBox.Size = new System.Drawing.Size(200, 60);
+               this.descriptionTextBox.TabIndex = 5;
+               // 
+               // linkLinkLabel
+               // 
+               this.linkLinkLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.postBindingSource, "Link", true));
+               this.linkLinkLabel.Location = new System.Drawing.Point(82, 126);
+               this.linkLinkLabel.Name = "linkLinkLabel";
+               this.linkLinkLabel.Size = new System.Drawing.Size(200, 23);
+               this.linkLinkLabel.TabIndex = 9;
+               this.linkLinkLabel.TabStop = true;
+               this.linkLinkLabel.Text = "linkLabel1";
+               // 
+               // messageLabel1
+               // 
+               this.messageLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.postBindingSource, "Message", true));
+               this.messageLabel1.Location = new System.Drawing.Point(82, 149);
+               this.messageLabel1.Name = "messageLabel1";
+               this.messageLabel1.Size = new System.Drawing.Size(200, 23);
+               this.messageLabel1.TabIndex = 11;
+               this.messageLabel1.Text = "label1";
+               // 
+               // nameLabel1
+               // 
+               this.nameLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.postBindingSource, "Name", true));
+               this.nameLabel1.Location = new System.Drawing.Point(82, 172);
+               this.nameLabel1.Name = "nameLabel1";
+               this.nameLabel1.Size = new System.Drawing.Size(200, 23);
+               this.nameLabel1.TabIndex = 13;
+               this.nameLabel1.Text = "label1";
                // 
                // postBindingNavigator
                // 
@@ -177,6 +285,31 @@ namespace BasicFacebookFeatures.Forms
                this.postBindingNavigator.Size = new System.Drawing.Size(800, 25);
                this.postBindingNavigator.TabIndex = 6;
                this.postBindingNavigator.Text = "bindingNavigator1";
+               // 
+               // bindingNavigatorAddNewItem
+               // 
+               this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+               this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+               this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+               this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+               this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+               this.bindingNavigatorAddNewItem.Text = "Add new";
+               // 
+               // bindingNavigatorCountItem
+               // 
+               this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+               this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+               this.bindingNavigatorCountItem.Text = "of {0}";
+               this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+               // 
+               // bindingNavigatorDeleteItem
+               // 
+               this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+               this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+               this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+               this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+               this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+               this.bindingNavigatorDeleteItem.Text = "Delete";
                // 
                // bindingNavigatorMoveFirstItem
                // 
@@ -211,16 +344,9 @@ namespace BasicFacebookFeatures.Forms
                this.bindingNavigatorPositionItem.Text = "0";
                this.bindingNavigatorPositionItem.ToolTipText = "Current position";
                // 
-               // bindingNavigatorCountItem
-               // 
-               this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-               this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-               this.bindingNavigatorCountItem.Text = "of {0}";
-               this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-               // 
                // bindingNavigatorSeparator1
                // 
-               this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+               this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
                this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
                // 
                // bindingNavigatorMoveNextItem
@@ -243,26 +369,8 @@ namespace BasicFacebookFeatures.Forms
                // 
                // bindingNavigatorSeparator2
                // 
-               this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+               this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
                this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-               // 
-               // bindingNavigatorAddNewItem
-               // 
-               this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-               this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-               this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-               this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-               this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-               this.bindingNavigatorAddNewItem.Text = "Add new";
-               // 
-               // bindingNavigatorDeleteItem
-               // 
-               this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-               this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-               this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-               this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-               this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-               this.bindingNavigatorDeleteItem.Text = "Delete";
                // 
                // postBindingNavigatorSaveItem
                // 
@@ -272,114 +380,6 @@ namespace BasicFacebookFeatures.Forms
                this.postBindingNavigatorSaveItem.Name = "postBindingNavigatorSaveItem";
                this.postBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
                this.postBindingNavigatorSaveItem.Text = "Save Data";
-               // 
-               // captionLabel
-               // 
-               captionLabel.AutoSize = true;
-               captionLabel.Location = new System.Drawing.Point(3, 11);
-               captionLabel.Name = "captionLabel";
-               captionLabel.Size = new System.Drawing.Size(46, 13);
-               captionLabel.TabIndex = 0;
-               captionLabel.Text = "Caption:";
-               // 
-               // captionLabel1
-               // 
-               this.captionLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.postBindingSource, "Caption", true));
-               this.captionLabel1.Location = new System.Drawing.Point(82, 11);
-               this.captionLabel1.Name = "captionLabel1";
-               this.captionLabel1.Size = new System.Drawing.Size(200, 23);
-               this.captionLabel1.TabIndex = 1;
-               this.captionLabel1.Text = "label1";
-               // 
-               // createdTimeLabel
-               // 
-               createdTimeLabel.AutoSize = true;
-               createdTimeLabel.Location = new System.Drawing.Point(3, 41);
-               createdTimeLabel.Name = "createdTimeLabel";
-               createdTimeLabel.Size = new System.Drawing.Size(73, 13);
-               createdTimeLabel.TabIndex = 2;
-               createdTimeLabel.Text = "Created Time:";
-               // 
-               // createdTimeDateTimePicker
-               // 
-               this.createdTimeDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.postBindingSource, "CreatedTime", true));
-               this.createdTimeDateTimePicker.Location = new System.Drawing.Point(82, 37);
-               this.createdTimeDateTimePicker.Name = "createdTimeDateTimePicker";
-               this.createdTimeDateTimePicker.Size = new System.Drawing.Size(200, 20);
-               this.createdTimeDateTimePicker.TabIndex = 3;
-               // 
-               // descriptionLabel
-               // 
-               descriptionLabel.AutoSize = true;
-               descriptionLabel.Location = new System.Drawing.Point(3, 66);
-               descriptionLabel.Name = "descriptionLabel";
-               descriptionLabel.Size = new System.Drawing.Size(63, 13);
-               descriptionLabel.TabIndex = 4;
-               descriptionLabel.Text = "Description:";
-               // 
-               // descriptionTextBox
-               // 
-               this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.postBindingSource, "Description", true));
-               this.descriptionTextBox.Location = new System.Drawing.Point(82, 63);
-               this.descriptionTextBox.Multiline = true;
-               this.descriptionTextBox.Name = "descriptionTextBox";
-               this.descriptionTextBox.Size = new System.Drawing.Size(200, 60);
-               this.descriptionTextBox.TabIndex = 5;
-               // 
-               // linkLabel
-               // 
-               linkLabel.AutoSize = true;
-               linkLabel.Location = new System.Drawing.Point(3, 126);
-               linkLabel.Name = "linkLabel";
-               linkLabel.Size = new System.Drawing.Size(30, 13);
-               linkLabel.TabIndex = 8;
-               linkLabel.Text = "Link:";
-               // 
-               // linkLinkLabel
-               // 
-               this.linkLinkLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.postBindingSource, "Link", true));
-               this.linkLinkLabel.Location = new System.Drawing.Point(82, 126);
-               this.linkLinkLabel.Name = "linkLinkLabel";
-               this.linkLinkLabel.Size = new System.Drawing.Size(200, 23);
-               this.linkLinkLabel.TabIndex = 9;
-               this.linkLinkLabel.TabStop = true;
-               this.linkLinkLabel.Text = "linkLabel1";
-               // 
-               // messageLabel
-               // 
-               messageLabel.AutoSize = true;
-               messageLabel.Location = new System.Drawing.Point(3, 149);
-               messageLabel.Name = "messageLabel";
-               messageLabel.Size = new System.Drawing.Size(53, 13);
-               messageLabel.TabIndex = 10;
-               messageLabel.Text = "Message:";
-               // 
-               // messageLabel1
-               // 
-               this.messageLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.postBindingSource, "Message", true));
-               this.messageLabel1.Location = new System.Drawing.Point(82, 149);
-               this.messageLabel1.Name = "messageLabel1";
-               this.messageLabel1.Size = new System.Drawing.Size(200, 23);
-               this.messageLabel1.TabIndex = 11;
-               this.messageLabel1.Text = "label1";
-               // 
-               // nameLabel
-               // 
-               nameLabel.AutoSize = true;
-               nameLabel.Location = new System.Drawing.Point(3, 172);
-               nameLabel.Name = "nameLabel";
-               nameLabel.Size = new System.Drawing.Size(38, 13);
-               nameLabel.TabIndex = 12;
-               nameLabel.Text = "Name:";
-               // 
-               // nameLabel1
-               // 
-               this.nameLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.postBindingSource, "Name", true));
-               this.nameLabel1.Location = new System.Drawing.Point(82, 172);
-               this.nameLabel1.Name = "nameLabel1";
-               this.nameLabel1.Size = new System.Drawing.Size(200, 23);
-               this.nameLabel1.TabIndex = 13;
-               this.nameLabel1.Text = "label1";
                // 
                // StatusForm
                // 
@@ -395,9 +395,9 @@ namespace BasicFacebookFeatures.Forms
                this.Controls.Add(this.m_LabelWritePost);
                this.Name = "StatusForm";
                this.Text = "Status";
+               ((System.ComponentModel.ISupportInitialize)(this.postBindingSource)).EndInit();
                this.panel1.ResumeLayout(false);
                this.panel1.PerformLayout();
-               ((System.ComponentModel.ISupportInitialize)(this.postBindingSource)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.postBindingNavigator)).EndInit();
                this.postBindingNavigator.ResumeLayout(false);
                this.postBindingNavigator.PerformLayout();

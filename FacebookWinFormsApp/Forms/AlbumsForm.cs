@@ -13,31 +13,24 @@ namespace BasicFacebookFeatures.Forms
                InitializeComponent();
                fetchAlbums();
           }
-
           private void fetchAlbums()
           {
-               albumBindingSource.DataSource = m_LoggedInUser.Albums;
+               try
+               {
+                    albumBindingSource.DataSource = m_LoggedInUser.Albums;
+               }
+               catch(Exception ex)
+               {
+                    MessageBox.Show(ex.Message);
+               }
+
+               if (m_LoggedInUser.Albums.Count == 0)
+               {
+                    MessageBox.Show("No albums  to retrieve :( ");
+               }
           }
-
-          //private void displaySelectedAlbum()
-          //{
-          //     if (m_ListBoxAlbumList.SelectedItems.Count == 1)
-          //     {
-          //          Album selectedAlbum = m_ListBoxAlbumList.SelectedItem as Album;
-          //          if (selectedAlbum.PictureAlbumURL != null)
-          //          {
-          //               m_PictureBox.LoadAsync(selectedAlbum.PictureAlbumURL);
-          //          }
-          //          else
-          //          {
-          //              // m_PictureBox.Image = pictureBoxProfile.ErrorImage;
-          //          }
-          //     }
-          //}
-
-          //private void m_ListBoxAlbumList_SelectedIndexChanged(object sender, EventArgs e)
-          //{
-          //     displaySelectedAlbum();
-          //}
      }
+
+
+     
 }

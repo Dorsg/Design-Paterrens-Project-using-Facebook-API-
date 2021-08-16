@@ -36,9 +36,10 @@ namespace BasicFacebookFeatures.Forms
                System.Windows.Forms.Label locationLabel;
                System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlbumsForm));
                this.m_ListBoxAlbumList = new System.Windows.Forms.ListBox();
+               this.albumBindingSource = new System.Windows.Forms.BindingSource(this.components);
                this.m_LabelAlbumList = new System.Windows.Forms.Label();
                this.panel1 = new System.Windows.Forms.Panel();
-               this.albumBindingSource = new System.Windows.Forms.BindingSource(this.components);
+               this.imageAlbumPictureBox = new System.Windows.Forms.PictureBox();
                this.createdTimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
                this.descriptionTextBox = new System.Windows.Forms.TextBox();
                this.linkLinkLabel = new System.Windows.Forms.LinkLabel();
@@ -56,16 +57,15 @@ namespace BasicFacebookFeatures.Forms
                this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
                this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
                this.albumBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-               this.imageAlbumPictureBox = new System.Windows.Forms.PictureBox();
                createdTimeLabel = new System.Windows.Forms.Label();
                descriptionLabel = new System.Windows.Forms.Label();
                linkLabel = new System.Windows.Forms.Label();
                locationLabel = new System.Windows.Forms.Label();
-               this.panel1.SuspendLayout();
                ((System.ComponentModel.ISupportInitialize)(this.albumBindingSource)).BeginInit();
+               this.panel1.SuspendLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.imageAlbumPictureBox)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.albumBindingNavigator)).BeginInit();
                this.albumBindingNavigator.SuspendLayout();
-               ((System.ComponentModel.ISupportInitialize)(this.imageAlbumPictureBox)).BeginInit();
                this.SuspendLayout();
                // 
                // createdTimeLabel
@@ -114,6 +114,10 @@ namespace BasicFacebookFeatures.Forms
                this.m_ListBoxAlbumList.Size = new System.Drawing.Size(186, 290);
                this.m_ListBoxAlbumList.TabIndex = 0;
                // 
+               // albumBindingSource
+               // 
+               this.albumBindingSource.DataSource = typeof(FacebookWrapper.ObjectModel.Album);
+               // 
                // m_LabelAlbumList
                // 
                this.m_LabelAlbumList.AutoSize = true;
@@ -140,9 +144,15 @@ namespace BasicFacebookFeatures.Forms
                this.panel1.Size = new System.Drawing.Size(344, 290);
                this.panel1.TabIndex = 3;
                // 
-               // albumBindingSource
+               // imageAlbumPictureBox
                // 
-               this.albumBindingSource.DataSource = typeof(FacebookWrapper.ObjectModel.Album);
+               this.imageAlbumPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.albumBindingSource, "ImageAlbum", true));
+               this.imageAlbumPictureBox.Location = new System.Drawing.Point(83, 0);
+               this.imageAlbumPictureBox.Name = "imageAlbumPictureBox";
+               this.imageAlbumPictureBox.Size = new System.Drawing.Size(157, 134);
+               this.imageAlbumPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+               this.imageAlbumPictureBox.TabIndex = 13;
+               this.imageAlbumPictureBox.TabStop = false;
                // 
                // createdTimeDateTimePicker
                // 
@@ -305,16 +315,6 @@ namespace BasicFacebookFeatures.Forms
                this.albumBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
                this.albumBindingNavigatorSaveItem.Text = "Save Data";
                // 
-               // imageAlbumPictureBox
-               // 
-               this.imageAlbumPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.albumBindingSource, "ImageAlbum", true));
-               this.imageAlbumPictureBox.Location = new System.Drawing.Point(0, 0);
-               this.imageAlbumPictureBox.Name = "imageAlbumPictureBox";
-               this.imageAlbumPictureBox.Size = new System.Drawing.Size(157, 134);
-               this.imageAlbumPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-               this.imageAlbumPictureBox.TabIndex = 13;
-               this.imageAlbumPictureBox.TabStop = false;
-               // 
                // AlbumsForm
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,13 +326,13 @@ namespace BasicFacebookFeatures.Forms
                this.Controls.Add(this.m_ListBoxAlbumList);
                this.Name = "AlbumsForm";
                this.Text = "Albums";
+               ((System.ComponentModel.ISupportInitialize)(this.albumBindingSource)).EndInit();
                this.panel1.ResumeLayout(false);
                this.panel1.PerformLayout();
-               ((System.ComponentModel.ISupportInitialize)(this.albumBindingSource)).EndInit();
+               ((System.ComponentModel.ISupportInitialize)(this.imageAlbumPictureBox)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.albumBindingNavigator)).EndInit();
                this.albumBindingNavigator.ResumeLayout(false);
                this.albumBindingNavigator.PerformLayout();
-               ((System.ComponentModel.ISupportInitialize)(this.imageAlbumPictureBox)).EndInit();
                this.ResumeLayout(false);
                this.PerformLayout();
 
