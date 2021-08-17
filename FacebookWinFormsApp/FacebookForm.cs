@@ -20,16 +20,16 @@ namespace BasicFacebookFeatures
      public partial class FacebbokForm : Form
      {
           private User m_LoggedInUser;
-          private AppSettings m_AppSettings = new AppSettings();
+          private AppSettingsSingleton m_AppSettingsSingleton;
           private Button m_CurrentButton;
           private Form m_ActiveForm;
           private LoginResult m_LoginResult;
           public FacebbokForm()
           {
                InitializeComponent();
-               m_AppSettings = AppSettings.LoadFromFile();
+               m_AppSettingsSingleton = AppSettingsSingleton.LoadFromFile();
 
-               this.m_CheckBoxRemmberMe.Checked = m_AppSettings.m_RememberUser;
+               this.m_CheckBoxRemmberMe.Checked = m_AppSettingsSingleton.m_RememberUser;
 
           }
 
@@ -109,7 +109,7 @@ namespace BasicFacebookFeatures
           {
                AlbumsForm albumsForm = new AlbumsForm(m_LoggedInUser);
                openChildForm(albumsForm, sender);
-               
+               new Thread(albumsForm.fetchAlbums).Start();
 
           }
           private void m_buttonGroups_Click(object sender, EventArgs e)
@@ -153,10 +153,10 @@ namespace BasicFacebookFeatures
           private void m_ButtonLogIn_Click(object sender, EventArgs e)
           {
 
-               if (m_AppSettings.m_RememberUser && !string.IsNullOrEmpty(m_AppSettings.m_LastAccessToken))
+               if (m_AppSettingsSingleton.m_RememberUser && !string.IsNullOrEmpty(m_AppSettingsSingleton.m_LastAccessToken))
                {
-                    m_LoginResult = FacebookService.Connect(m_AppSettings.m_LastAccessToken);
-                    m_AppSettings.SaveToFile();
+                    m_LoginResult = FacebookService.Connect(m_AppSettingsSingleton.m_LastAccessToken);
+                    m_AppSettingsSingleton.SaveToFile();
                }
                else
                {
@@ -178,12 +178,12 @@ namespace BasicFacebookFeatures
                          "user_posts",
                          "user_videos");
 
-                    m_AppSettings.m_LastAccessToken = null;
+                    m_AppSettingsSingleton.m_LastAccessToken = null;
                }
 
                if (!string.IsNullOrEmpty(m_LoginResult.AccessToken))
                {
-                    m_AppSettings.m_LastAccessToken = m_LoginResult.AccessToken;
+                    m_AppSettingsSingleton.m_LastAccessToken = m_LoginResult.AccessToken;
                     m_LoggedInUser = m_LoginResult.LoggedInUser;
                     m_ButtonLogIn.Text = "Logged in";
                     fetchUserInfo();
@@ -196,12 +196,12 @@ namespace BasicFacebookFeatures
 
           private void m_CheckBoxRemmberMe_CheckedChanged(object sender, EventArgs e)
           {
-               m_AppSettings.m_RememberUser = m_CheckBoxRemmberMe.Checked;
+               m_AppSettingsSingleton.m_RememberUser = m_CheckBoxRemmberMe.Checked;
           }
 
           protected override void OnClosed(EventArgs e)
           {
-               m_AppSettings.SaveToFile();
+               m_AppSettingsSingleton.SaveToFile();
                base.OnClosed(e);
           }
      }
