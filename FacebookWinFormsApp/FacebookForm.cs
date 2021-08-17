@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using FacebookWrapper.ObjectModel;
 using FacebookWrapper;
 using System.Runtime.InteropServices;
+using System.Threading;
+using BasicFacebookFeatures.Forms;
 
 // features explanations:
 // feature 1:
@@ -99,11 +101,16 @@ namespace BasicFacebookFeatures
           }
           private void m_ButtonStatus_Click(object sender, EventArgs e)
           {
-               openChildForm(new Forms.StatusForm(m_LoggedInUser), sender);
+               StatusForm statusForm = new StatusForm(m_LoggedInUser);
+               openChildForm(statusForm, sender);
+               new Thread(statusForm.fetchPosts).Start();
           }
           private void m_ButtonAlbums_Click(object sender, EventArgs e)
           {
-               openChildForm(new Forms.AlbumsForm(m_LoggedInUser), sender);
+               AlbumsForm albumsForm = new AlbumsForm(m_LoggedInUser);
+               openChildForm(albumsForm, sender);
+               
+
           }
           private void m_buttonGroups_Click(object sender, EventArgs e)
           {
@@ -111,7 +118,9 @@ namespace BasicFacebookFeatures
           }
           private void m_ButtonPages_Click(object sender, EventArgs e)
           {
-               openChildForm(new Forms.PagesForm(m_LoggedInUser), sender);
+               PagesForm pagesForm = new PagesForm(m_LoggedInUser);
+               openChildForm(pagesForm, sender);
+               new Thread(pagesForm.fetchLikedPages).Start();
           }
           private void m_ButtonEvents_Click(object sender, EventArgs e)
           {
@@ -152,8 +161,7 @@ namespace BasicFacebookFeatures
                else
                {
                     m_LoginResult = FacebookService.Login(
-                    /// (This is Desig Patter's App ID. replace it with your own)
-                    "2932466203680140",
+                         "2932466203680140",
                     /// requested permissions:
                     "email",
                          "public_profile",
@@ -171,9 +179,6 @@ namespace BasicFacebookFeatures
                          "user_videos");
 
                     m_AppSettings.m_LastAccessToken = null;
-
-
-
                }
 
                if (!string.IsNullOrEmpty(m_LoginResult.AccessToken))
@@ -192,6 +197,12 @@ namespace BasicFacebookFeatures
           private void m_CheckBoxRemmberMe_CheckedChanged(object sender, EventArgs e)
           {
                m_AppSettings.m_RememberUser = m_CheckBoxRemmberMe.Checked;
+          }
+
+          protected override void OnClosed(EventArgs e)
+          {
+               m_AppSettings.SaveToFile();
+               base.OnClosed(e);
           }
      }
 }

@@ -1,5 +1,6 @@
 ﻿using FacebookWrapper.ObjectModel;
 using System;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace BasicFacebookFeatures.Forms
@@ -11,13 +12,17 @@ namespace BasicFacebookFeatures.Forms
           {
                m_LoggedInUser = i_LoggedInUser;
                InitializeComponent();
-               fetchPosts();
+              // fetchPosts();
+               
           }
-          private void fetchPosts()
+          public void fetchPosts()
           {
                try
                {
-                    postBindingSource.DataSource = m_LoggedInUser.Posts;
+                  //  postBindingSource.DataSource = m_LoggedInUser.Posts;
+                     this.Invoke(new Action(
+                       () => postBindingSource.DataSource = m_LoggedInUser.Posts ));
+
                }
                catch (Exception ex)
                {

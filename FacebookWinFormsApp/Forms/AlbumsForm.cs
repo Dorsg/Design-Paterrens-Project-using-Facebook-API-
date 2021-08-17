@@ -1,5 +1,6 @@
 ﻿using FacebookWrapper.ObjectModel;
 using System;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace BasicFacebookFeatures.Forms
@@ -11,13 +12,14 @@ namespace BasicFacebookFeatures.Forms
           {
                m_LoggedInUser = i_LoggedInUser;
                InitializeComponent();
-               fetchAlbums();
+               
           }
-          private void fetchAlbums()
+          public void fetchAlbums()
           {
                try
                {
-                    albumBindingSource.DataSource = m_LoggedInUser.Albums;
+                    this.Invoke(new Action(
+                         () => albumBindingSource.DataSource = m_LoggedInUser.Albums ));
                }
                catch(Exception ex)
                {

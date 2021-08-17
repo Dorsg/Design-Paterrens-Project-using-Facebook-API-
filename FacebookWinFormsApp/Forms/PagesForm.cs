@@ -19,14 +19,14 @@ namespace BasicFacebookFeatures.Forms
         {
             m_LoggedInUser = i_LoggedInUser;
             InitializeComponent();
-            fetchLikedPages();
         }
 
-        private void fetchLikedPages()
+        public void fetchLikedPages()
         {
              try
              {
-                  pageBindingSource.DataSource = m_LoggedInUser.LikedPages;
+                  this.Invoke(new Action(
+                       () => pageBindingSource.DataSource = m_LoggedInUser.LikedPages ));
              }
              catch (Exception ex)
              {
