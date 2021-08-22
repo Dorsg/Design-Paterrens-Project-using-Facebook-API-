@@ -140,6 +140,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy.cs" />
     <EmbeddedResource Include="Forms\BirthdaysForm.resx">
       <DependentUpon>BirthdaysForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +176,8 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BasicFacebookFeatures.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\BasicFacebookFeatures.Properties.Settings.datasource" />
     <None Include="Properties\DataSources\FacebookWrapper.ObjectModel.Album.datasource" />
     <None Include="Properties\DataSources\FacebookWrapper.ObjectModel.Event.datasource" />
     <None Include="Properties\DataSources\FacebookWrapper.ObjectModel.Page.datasource" />
