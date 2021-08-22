@@ -105,12 +105,14 @@
     <Compile Include="Forms\AlbumsForm.Designer.cs">
       <DependentUpon>AlbumsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ConcreteScreenFactory.cs" />
     <Compile Include="Forms\DatingForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\DatingForm.Designer.cs">
       <DependentUpon>DatingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\eScreenType.cs" />
     <Compile Include="Forms\EventsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +131,7 @@
     <Compile Include="Forms\PagesForm.Designer.cs">
       <DependentUpon>PagesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ScreensFactory.cs" />
     <Compile Include="Forms\StatusForm.cs">
       <SubType>Form</SubType>
     </Compile>

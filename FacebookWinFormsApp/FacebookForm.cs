@@ -21,6 +21,7 @@ namespace BasicFacebookFeatures
      {
           private User m_LoggedInUser;
           private AppSettingsSingleton m_AppSettingsSingleton;
+          private ConcreteScreenFactory m_ScreenFactory;
           private Button m_CurrentButton;
           private Form m_ActiveForm;
           private LoginResult m_LoginResult;
@@ -28,7 +29,7 @@ namespace BasicFacebookFeatures
           {
                InitializeComponent();
                m_AppSettingsSingleton = AppSettingsSingleton.LoadFromFile();
-
+               m_ScreenFactory = new ConcreteScreenFactory();
                this.m_CheckBoxRemmberMe.Checked = m_AppSettingsSingleton.m_RememberUser;
 
           }
@@ -101,38 +102,41 @@ namespace BasicFacebookFeatures
           }
           private void m_ButtonStatus_Click(object sender, EventArgs e)
           {
-               StatusForm statusForm = new StatusForm(m_LoggedInUser);
-               openChildForm(statusForm, sender);
-               new Thread(statusForm.fetchPosts).Start();
+               Form statusForm = m_ScreenFactory.FactoryMethod(eScreenType.StatusForm, m_LoggedInUser);
+               openChildForm(statusForm as StatusForm, sender);
+               new Thread((statusForm as StatusForm).fetchPosts).Start();
           }
           private void m_ButtonAlbums_Click(object sender, EventArgs e)
           {
-               AlbumsForm albumsForm = new AlbumsForm(m_LoggedInUser);
+               Form albumsForm = m_ScreenFactory.FactoryMethod(eScreenType.AlbumsForm, m_LoggedInUser);
                openChildForm(albumsForm, sender);
-               new Thread(albumsForm.fetchAlbums).Start();
-
+               new Thread((albumsForm as AlbumsForm).fetchAlbums).Start();
           }
           private void m_buttonGroups_Click(object sender, EventArgs e)
           {
-               openChildForm(new Forms.GroupsForm(m_LoggedInUser), sender);
+               Form groupForm = m_ScreenFactory.FactoryMethod(eScreenType.GroupsForm, m_LoggedInUser);
+               openChildForm(groupForm, sender);
           }
           private void m_ButtonPages_Click(object sender, EventArgs e)
           {
-               PagesForm pagesForm = new PagesForm(m_LoggedInUser);
+               Form pagesForm = m_ScreenFactory.FactoryMethod(eScreenType.PagesForm, m_LoggedInUser);
                openChildForm(pagesForm, sender);
-               new Thread(pagesForm.fetchLikedPages).Start();
+               new Thread((pagesForm as PagesForm).fetchLikedPages).Start();
           }
           private void m_ButtonEvents_Click(object sender, EventArgs e)
           {
-               openChildForm(new Forms.EventsForm(m_LoggedInUser), sender);
+               Form eventForm = m_ScreenFactory.FactoryMethod(eScreenType.EventsForm, m_LoggedInUser);
+               openChildForm(eventForm, sender);
           }
           private void m_ButtonMyFeature1_Click(object sender, EventArgs e)
           {
-               openChildForm(new Forms.DatingForm(m_LoggedInUser), sender);
+               Form datingForm = m_ScreenFactory.FactoryMethod(eScreenType.DatingForm, m_LoggedInUser);
+               openChildForm(datingForm, sender);
           }
           private void m_buttonMyFeature2_Click(object sender, EventArgs e)
           {
-               openChildForm(new Forms.BirthdayForm(m_LoggedInUser), sender);
+               Form birthdayForm = m_ScreenFactory.FactoryMethod(eScreenType.BirthdaysForm, m_LoggedInUser);
+               openChildForm(birthdayForm, sender);
           }
           private void m_ButtonLogout_Click(object sender, EventArgs e)
           {
