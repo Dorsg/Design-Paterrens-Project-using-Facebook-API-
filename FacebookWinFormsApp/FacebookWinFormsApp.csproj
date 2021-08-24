@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettingsSingleton.cs" />
+    <Compile Include="LoginFacade.cs" />
     <Compile Include="Forms\BirthdaysForm.cs">
       <SubType>Form</SubType>
     </Compile>

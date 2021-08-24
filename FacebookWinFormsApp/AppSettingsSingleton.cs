@@ -12,7 +12,7 @@ namespace BasicFacebookFeatures
      public sealed class AppSettingsSingleton
      {
           private static volatile AppSettingsSingleton instance;
-          private static object lockObject = new Object();
+          private static readonly object lockObject = new Object();
           public bool m_RememberUser { get; set; }
           public string m_LastAccessToken { get; set; }
 

@@ -1,7 +1,7 @@
 ﻿
 namespace BasicFacebookFeatures
 {
-     partial class FacebbokForm
+     partial class FacebookForm
      {
           /// <summary>
           /// Required designer variable.
@@ -45,10 +45,10 @@ namespace BasicFacebookFeatures
                this.m_LabelName = new System.Windows.Forms.Label();
                this.m_LabelGender = new System.Windows.Forms.Label();
                this.m_TtilePanel = new System.Windows.Forms.Panel();
+               this.m_CheckBoxRemmberMe = new System.Windows.Forms.CheckBox();
                this.m_ButtonLogIn = new System.Windows.Forms.Button();
                this.m_LabelTitle = new System.Windows.Forms.Label();
                this.m_PanelDesktop = new System.Windows.Forms.Panel();
-               this.m_CheckBoxRemmberMe = new System.Windows.Forms.CheckBox();
                m_ButtonEvents = new System.Windows.Forms.Button();
                this.m_PanelMenu.SuspendLayout();
                this.m_PanelUpperMenu.SuspendLayout();
@@ -128,7 +128,7 @@ namespace BasicFacebookFeatures
                this.m_ButtonLogout.Location = new System.Drawing.Point(0, 370);
                this.m_ButtonLogout.Name = "m_ButtonLogout";
                this.m_ButtonLogout.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-               this.m_ButtonLogout.Size = new System.Drawing.Size(269, 42);
+               this.m_ButtonLogout.Size = new System.Drawing.Size(269, 53);
                this.m_ButtonLogout.TabIndex = 9;
                this.m_ButtonLogout.Text = "   Logout";
                this.m_ButtonLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -319,6 +319,18 @@ namespace BasicFacebookFeatures
                this.m_TtilePanel.TabIndex = 12;
                this.m_TtilePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.m_TtilePanel_MouseDown);
                // 
+               // m_CheckBoxRemmberMe
+               // 
+               this.m_CheckBoxRemmberMe.AutoSize = true;
+               this.m_CheckBoxRemmberMe.ForeColor = System.Drawing.SystemColors.ButtonFace;
+               this.m_CheckBoxRemmberMe.Location = new System.Drawing.Point(4, 27);
+               this.m_CheckBoxRemmberMe.Name = "m_CheckBoxRemmberMe";
+               this.m_CheckBoxRemmberMe.Size = new System.Drawing.Size(94, 17);
+               this.m_CheckBoxRemmberMe.TabIndex = 2;
+               this.m_CheckBoxRemmberMe.Text = "Remember me";
+               this.m_CheckBoxRemmberMe.UseVisualStyleBackColor = true;
+               this.m_CheckBoxRemmberMe.CheckedChanged += new System.EventHandler(this.m_CheckBoxRemmberMe_CheckedChanged);
+               // 
                // m_ButtonLogIn
                // 
                this.m_ButtonLogIn.BackColor = System.Drawing.Color.White;
@@ -352,19 +364,7 @@ namespace BasicFacebookFeatures
                this.m_PanelDesktop.TabIndex = 13;
                this.m_PanelDesktop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.m_PanelDesktop_MouseDown);
                // 
-               // m_CheckBoxRemmberMe
-               // 
-               this.m_CheckBoxRemmberMe.AutoSize = true;
-               this.m_CheckBoxRemmberMe.ForeColor = System.Drawing.SystemColors.ButtonFace;
-               this.m_CheckBoxRemmberMe.Location = new System.Drawing.Point(4, 27);
-               this.m_CheckBoxRemmberMe.Name = "m_CheckBoxRemmberMe";
-               this.m_CheckBoxRemmberMe.Size = new System.Drawing.Size(94, 17);
-               this.m_CheckBoxRemmberMe.TabIndex = 2;
-               this.m_CheckBoxRemmberMe.Text = "Remember me";
-               this.m_CheckBoxRemmberMe.UseVisualStyleBackColor = true;
-               this.m_CheckBoxRemmberMe.CheckedChanged += new System.EventHandler(this.m_CheckBoxRemmberMe_CheckedChanged);
-               // 
-               // FacebbokForm
+               // FacebookForm
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -374,7 +374,7 @@ namespace BasicFacebookFeatures
                this.Controls.Add(this.m_TtilePanel);
                this.Controls.Add(this.m_PanelMenu);
                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-               this.Name = "FacebbokForm";
+               this.Name = "FacebookForm";
                this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
                this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
                this.Load += new System.EventHandler(this.FcbForm_Load);

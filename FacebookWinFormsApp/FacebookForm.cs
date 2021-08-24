@@ -17,27 +17,28 @@ using BasicFacebookFeatures.Forms;
 
 namespace BasicFacebookFeatures
 {
-     public partial class FacebbokForm : Form
+     public partial class FacebookForm : Form
      {
+          private readonly AppSettingsSingleton m_AppSettingsSingleton;
+          private readonly ConcreteScreenFactory m_ScreenFactory;
+          private readonly LoginFacade m_loginFacade;
           private User m_LoggedInUser;
-          private AppSettingsSingleton m_AppSettingsSingleton;
-          private ConcreteScreenFactory m_ScreenFactory;
           private Button m_CurrentButton;
           private Form m_ActiveForm;
-          private LoginResult m_LoginResult;
-          public FacebbokForm()
+          public FacebookForm()
           {
                InitializeComponent();
                m_AppSettingsSingleton = AppSettingsSingleton.LoadFromFile();
                m_ScreenFactory = new ConcreteScreenFactory();
+               m_loginFacade = new LoginFacade();
                this.m_CheckBoxRemmberMe.Checked = m_AppSettingsSingleton.m_RememberUser;
 
           }
 
           [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-          private extern static void ReleaseCapture();
+          private static extern void ReleaseCapture();
           [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-          private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+          private static extern void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
           private void FcbForm_Load(object sender, EventArgs e) { }
           private void fetchUserInfo()
@@ -84,10 +85,7 @@ namespace BasicFacebookFeatures
           }
           private void openChildForm(Form childForm, object btnSender)
           {
-               if (m_ActiveForm != null)
-               {
-                    m_ActiveForm.Close();
-               }
+               m_ActiveForm?.Close();
 
                ActivateButton(btnSender);
                m_ActiveForm = childForm;
@@ -103,7 +101,7 @@ namespace BasicFacebookFeatures
           private void m_ButtonStatus_Click(object sender, EventArgs e)
           {
                Form statusForm = m_ScreenFactory.FactoryMethod(eScreenType.StatusForm, m_LoggedInUser);
-               openChildForm(statusForm as StatusForm, sender);
+               openChildForm(statusForm, sender);
                new Thread((statusForm as StatusForm).fetchPosts).Start();
           }
           private void m_ButtonAlbums_Click(object sender, EventArgs e)
@@ -156,45 +154,14 @@ namespace BasicFacebookFeatures
 
           private void m_ButtonLogIn_Click(object sender, EventArgs e)
           {
-
-               if (m_AppSettingsSingleton.m_RememberUser && !string.IsNullOrEmpty(m_AppSettingsSingleton.m_LastAccessToken))
+               if(m_loginFacade.CanLogin(ref m_LoggedInUser, m_AppSettingsSingleton))
                {
-                    m_LoginResult = FacebookService.Connect(m_AppSettingsSingleton.m_LastAccessToken);
-                    m_AppSettingsSingleton.SaveToFile();
-               }
-               else
-               {
-                    m_LoginResult = FacebookService.Login(
-                         "2932466203680140",
-                    /// requested permissions:
-                    "email",
-                         "public_profile",
-                         "user_age_range",
-                         "user_birthday",
-                         "user_events",
-                         "user_friends",
-                         "user_gender",
-                         "user_hometown",
-                         "user_likes",
-                         "user_link",
-                         "user_location",
-                         "user_photos",
-                         "user_posts",
-                         "user_videos");
-
-                    m_AppSettingsSingleton.m_LastAccessToken = null;
-               }
-
-               if (!string.IsNullOrEmpty(m_LoginResult.AccessToken))
-               {
-                    m_AppSettingsSingleton.m_LastAccessToken = m_LoginResult.AccessToken;
-                    m_LoggedInUser = m_LoginResult.LoggedInUser;
                     m_ButtonLogIn.Text = "Logged in";
                     fetchUserInfo();
                }
                else
                {
-                    MessageBox.Show(m_LoginResult.ErrorMessage, "Login Failed");
+                    MessageBox.Show( "Login Failed, please try again");
                }
           }
 

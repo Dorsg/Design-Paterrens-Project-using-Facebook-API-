@@ -23,7 +23,7 @@ namespace BasicFacebookFeatures.Forms
         private ListBox m_ListBirthdayFriends;
         private Button buttonSetStatus;
         private readonly User m_LoggedInUser;
-        private string m_FileNamePattern;
+        private readonly string m_FileNamePattern;
         private readonly XMLProxy r_XMLProxy = new XMLProxy(typeof(String));
         private IContainer components;
         private ListBox birthdayScore;
@@ -73,7 +73,7 @@ namespace BasicFacebookFeatures.Forms
             {
                 loadBirthdayPost();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("you haven't posted a happy birthday post yet :(");
             }
@@ -147,15 +147,15 @@ namespace BasicFacebookFeatures.Forms
 
         private void loadBirthdayPost()
         {
-            birthdayScore.Invoke(new Action(() =>
-              postBindingSource.DataSource = LoadPost()));
+            birthdayScore.Invoke(new Action(() => 
+                 postBindingSource.DataSource = LoadPost()));
         }
 
         private string calculateAge(DateTime Dob)
         {
-            DateTime Now = DateTime.Now;
+            DateTime now = DateTime.Now;
             int Years = new DateTime(DateTime.Now.Subtract(Dob).Ticks).Year - 1;
-            DateTime PastYearDate = Dob.AddYears(Years);
+            DateTime pastYearDate = Dob.AddYears(Years);
 
             return String.Format("Age: {0}", Years);
 
