@@ -12,6 +12,8 @@ using System.Runtime.InteropServices;
 using Proxy;
 using System.IO;
 using System.Threading;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace BasicFacebookFeatures.Forms
 {
@@ -29,6 +31,8 @@ namespace BasicFacebookFeatures.Forms
         private ListBox birthdayScore;
         private BindingSource postBindingSource;
         private readonly List<String> o_BirthdayPosts = new List<String>();
+        public static BirthdayFriends m_BirthdayFriends { get; set; }
+
         public BirthdayForm(User i_LoggedInUser)
         {
             m_LoggedInUser = i_LoggedInUser;
@@ -36,8 +40,48 @@ namespace BasicFacebookFeatures.Forms
             fetchBirthdayFriends();
             buttonSetStatus.Hide();
             m_FileNamePattern = $"triviaScore{m_LoggedInUser.Id}.xml";
-            
+            m_BirthdayFriends = new BirthdayFriends();
+            SubscribeBirthdayFriendAdded(loadBirhdayFriends);
+
         }
+        public class BirthdayFriends : IEnumerable
+        {
+            public User LoggedInUser { get; set; }
+
+            public event Action m_BirthdayFriendAdded;
+
+            private readonly HashSet<User> r_BirthdayFriends = new HashSet<User>();
+
+
+            public IEnumerator GetEnumerator()
+            {
+                foreach (User BirthdayFriend in r_BirthdayFriends)
+                {
+                    yield return BirthdayFriend;
+                }
+            }
+
+            internal void AddBirthdayFriend(User i_BirthdayFriend)
+            {
+                r_BirthdayFriends.Add(i_BirthdayFriend);
+                onStatusBirthdayPostFriendAdded();
+            }
+
+            private void onStatusBirthdayPostFriendAdded()
+            {
+                if (m_BirthdayFriendAdded != null)
+                {
+                    m_BirthdayFriendAdded.Invoke();
+                }
+            }
+
+        }
+       
+        public void SubscribeBirthdayFriendAdded(Action i_LoadBirthdayFriends)
+        {
+            m_BirthdayFriends.m_BirthdayFriendAdded += i_LoadBirthdayFriends;
+        }
+
         private void fetchBirthdayFriends()
         {
             m_ListBirthdayFriends.Items.Clear();
@@ -79,7 +123,17 @@ namespace BasicFacebookFeatures.Forms
             }
 
         }
+        private void loadBirhdayFriends()
 
+        {
+     
+            m_ListBirthdayFriends.Items.Clear();
+
+            foreach (User birthdayFriend in m_BirthdayFriends)
+            {
+                m_ListBirthdayFriends.Items.Add(birthdayFriend);
+            }
+        }
         private void displaySelectedBirthdayFriendImage()
         {
             if (m_ListBirthdayFriends.SelectedItems.Count == 1)
@@ -274,6 +328,7 @@ namespace BasicFacebookFeatures.Forms
                 Status postedStatus = user.PostStatus("happy birhday!");
                 MessageBox.Show("Status Posted! ID: " + postedStatus.Id);
                 SavePost();
+                addLikedFriend(m_ListBirthdayFriends.SelectedItem as User);
             }
             catch (Exception ex)
             {
@@ -281,6 +336,11 @@ namespace BasicFacebookFeatures.Forms
             }
             
             
+        }
+
+        private void addLikedFriend(User i_LikedFriend)
+        {
+            m_BirthdayFriends.AddBirthdayFriend(i_LikedFriend);
         }
 
     }

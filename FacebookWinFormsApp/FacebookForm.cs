@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using BasicFacebookFeatures.Forms;
 
+
 // features explanations:
 // feature 1:
 // find all of my single friends with a different gender than me and display them on a list
@@ -25,7 +26,10 @@ namespace BasicFacebookFeatures
           private User m_LoggedInUser;
           private Button m_CurrentButton;
           private Form m_ActiveForm;
-          public FacebookForm()
+        
+   
+
+        public FacebookForm()
           {
                InitializeComponent();
                m_AppSettingsSingleton = AppSettingsSingleton.LoadFromFile();
@@ -33,9 +37,11 @@ namespace BasicFacebookFeatures
                m_loginFacade = new LoginFacade();
                this.m_CheckBoxRemmberMe.Checked = m_AppSettingsSingleton.m_RememberUser;
 
-          }
 
-          [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        }
+
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
           private static extern void ReleaseCapture();
           [DllImport("user32.DLL", EntryPoint = "SendMessage")]
           private static extern void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
@@ -52,7 +58,8 @@ namespace BasicFacebookFeatures
                this.Text = string.Empty;
 
           }
-          private void ActivateButton(object btnSender)
+       
+        private void ActivateButton(object btnSender)
           {
                if (btnSender != null)
                {
