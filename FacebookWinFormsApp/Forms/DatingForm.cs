@@ -15,38 +15,19 @@ namespace BasicFacebookFeatures.Forms
      public partial class DatingForm : Form
      {
           private readonly User m_LoggedInUser;
+
+          private readonly FindSingleFriendsStrategy m_FindSingleFriendsStrategy;
           public DatingForm(User i_LoggedInUser)
           {
                m_LoggedInUser = i_LoggedInUser;
+               m_FindSingleFriendsStrategy = new FindSingleFriendsStrategy();
                InitializeComponent();
                fetchSingles();
           }
 
           private void fetchSingles()
           {
-               m_ListBoxSingles.Items.Clear();
-               m_ListBoxSingles.DisplayMember = "Name";
-               try
-               {
-                    foreach(User user in m_LoggedInUser.Friends)
-                    {
-                         if(user.Gender != m_LoggedInUser.Gender
-                            && user.RelationshipStatus == User.eRelationshipStatus.Single)
-                         {
-                              m_ListBoxSingles.Items.Add(user);
-                         }
-
-                    }
-               }
-               catch(Exception ex)
-               {
-                    MessageBox.Show(ex.ToString());
-               }
-
-               if (m_ListBoxSingles.Items.Count == 0)
-               {
-                    MessageBox.Show("No Singles to retrieve :(");
-               }
+               m_FindSingleFriendsStrategy.GetFriends(m_LoggedInUser, m_ListBoxSingles);
           }
 
           private void displaySelectedSingleImage()
